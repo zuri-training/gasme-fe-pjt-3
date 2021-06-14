@@ -1,11 +1,9 @@
-import './App.css';
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      Front-end GAS and ME
-    </div>
-  );
+  return <div className="App">
+    GAS AND ME
+  </div>;
 }
 
 export default App;
