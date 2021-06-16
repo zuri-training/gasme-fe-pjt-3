@@ -1,0 +1,2 @@
+(this.webpackJsonpfrontend=this.webpackJsonpfrontend||[]).push([[0],{11:function(n,t,e){"use strict";e.r(t);var c=e(1),r=e.n(c),o=e(3),s=e.n(o),i=(e(8),e(9),e(0));var d=function(){return Object(i.jsx)("div",{className:"App",children:"GAS AND ME"})};s.a.render(Object(i.jsx)(r.a.StrictMode,{children:Object(i.jsx)(d,{})}),document.getElementById("root"))},8:function(n,t,e){},9:function(n,t,e){}},[[11,1,2]]]);
+//# sourceMappingURL=main.33a34841.chunk.js.map
