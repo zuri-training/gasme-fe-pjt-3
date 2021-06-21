@@ -1,0 +1,66 @@
+.how-wrapper {
+  border: 3px solid yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+  height: 300px;
+}
+
+.title {
+  border: 3px solid yellow;
+}
+
+.title h1 {
+  color: #37b12c;
+  font-size: min(max(1rem, 3vw), 2em);
+}
+
+.content-wrapper {
+  border: 3px solid yellow;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin-top: 30px;
+}
+
+.content-wrapper img {
+  border: 2px solid red;
+  height: 150px;
+  margin: 10px;
+}
+
+.content-wrapper .arr {
+  height: 20px;
+  align-self: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .content-wrapper img {
+    border: 2px solid red;
+    height: 100px;
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+  .content-wrapper img {
+    border: 2px solid red;
+    height: 80px;
+    margin: 10px;
+  }
+
+  .how-wrapper {
+    height: auto;
+    padding: 15px;
+  }
+  .content-wrapper .arr {
+    border: 1px solid black;
+    content: url("../assets/arrdown.png");
+    height: 60px;
+  }
+}

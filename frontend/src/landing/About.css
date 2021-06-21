@@ -1,0 +1,38 @@
+
+.about-wrapper{
+  background: url("../assets/about.png");
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding:50px;
+  display: flex;
+  flex-direction: column;
+}
+.about-wrapper .about-title{
+  border: 1px solid black;
+}
+.about-title h2{
+  border: 1px solid black;
+  color: #37b12c;
+  padding: 20px 0px;
+  font-size: 2em;
+}
+
+.about-wrapper .about-body{
+  border: 1px solid black;
+
+}
+
+.about-body p{
+  margin: 40px 0px
+}
+.about-body h3{
+  color:#37b12c;
+  font-size: 1.5em;
+}
+
+.about-body p span{
+  font-size: 1.2em;
+  font-weight: 400;
+}
+

@@ -1,0 +1,126 @@
+.intouch-wrapper {
+  border: 2px solid orange;
+  display: flex;
+  flex-direction: column;
+}
+
+.intouch-wrapper .map {
+  border: 2px solid magenta;
+  height: 500px;
+  position: relative;
+}
+
+.intouch-wrapper .map::after {
+  background: rgba(0, 0, 0, 0.4) url(../assets/map.png);
+  background-blend-mode: darken;
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  content: "";
+  border: 3px solid cyan;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.map div {
+  margin-top: 70px;
+  margin-left: 70px;
+}
+
+.map div h1 {
+  font-size: min(max(2rem, 4vw), 3.5em);
+  color: #ffde5a;
+}
+
+.map div h3 {
+  font-size: min(max(1rem, 3vw), 1.5em);
+  color: #ffde5a;
+}
+
+.intouch-wrapper .form {
+  border: 2px solid brown;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+.intouch-wrapper form {
+  border: 2px solid brown;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  background-color: #e4e4e4;
+}
+
+.intouch-wrapper form h3 {
+  padding: 0px;
+  border: 0px;
+  font-size: 1.3em;
+  font-weight: normal;
+  color: #120101;
+  font-weight: 500;
+}
+
+.intouch-wrapper form textarea {
+  height: 100px;
+}
+
+.intouch-wrapper form input[type="button"] {
+  background-color: #37b12c;
+  color: #fff;
+}
+
+.intouch-wrapper form > * {
+  width: 350px;
+  height: 40px;
+  font-size: 1.3em;
+  padding: 4px 10px;
+  margin-top: 15px;
+  border-radius: 7px;
+  border: 1px solid #cff8d8;
+}
+
+.intouch-wrapper form,
+.intouch-wrapper .contact-info {
+  position: relative;
+  top: -150px;
+}
+
+.intouch-wrapper form > *:focus {
+  outline: none;
+}
+
+.intouch-wrapper .contact-info {
+  padding: 20px;
+  border: 2px solid brown;
+  background-color: #37b12c;
+  height: fit-content;
+  color: #fff;
+  align-self: flex-end;
+}
+
+.contact-info h2 {
+  font-size: 1.5em;
+}
+
+.contact-info > * {
+  font-size: 1em;
+}
+
+.contact-info p {
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 765px) {
+  .intouch-wrapper .contact-info {
+    margin-top: 5px;
+  }
+}

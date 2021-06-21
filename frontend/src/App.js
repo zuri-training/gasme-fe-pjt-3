@@ -1,9 +1,10 @@
 import "./App.css";
+import Main from './landing/Main';
 
 function App() {
-  return <div className="App">
-    GAS AND ME
-  </div>;
+  return <>
+    <Main />
+  </>;
 }
 
 export default App;

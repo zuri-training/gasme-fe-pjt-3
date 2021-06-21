@@ -1,0 +1,245 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  padding: 0 80px;
+  position: relative;
+}
+
+.banner::after {
+  background: url("../assets/bannerImg.png");
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  filter: grayscale(70%);
+  content: "";
+  border: 4px solid red;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.banner .top {
+  border: 2px solid rgb(169, 169, 206);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  z-index: 2;
+}
+
+.banner .new-menu {
+  display: none;
+}
+
+.top .logo {
+  margin-right: auto;
+}
+
+.top nav {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  margin-right: 100px;
+}
+
+nav li {
+  list-style: none;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav li:hover {
+  border-bottom: 3px solid #10e048;
+  font-size: 1.3em;
+}
+
+.top .buttons button {
+  font-size: 1em;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #299445;
+  border: 1px solid #076327;
+  transition: background-color 400ms ease-in-out;
+  cursor: pointer;
+}
+
+.buttons .login {
+  margin-right: 15px;
+}
+
+.top .buttons button:hover {
+  background-color: #deeee5;
+  color: #299445;
+}
+
+.top .menu {
+  visibility: hidden;
+}
+
+.banner .body {
+  border: 2px solid rgb(169, 169, 206);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 2;
+}
+
+.big-text h1 {
+  border: 2px solid rgb(169, 169, 206);
+  color: #ffe81b;
+  font-size: min(max(1rem, 4vw), 4.5em);
+  margin-top: 90px;
+}
+
+.body .small-text {
+  border: 2px solid rgb(169, 169, 206);
+  color: #fff;
+  font-size: min(max(0.7rem, 2vw), 1.5em);
+  margin-top: 40px;
+}
+
+.body .search {
+  display: flex;
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 15px 20px;
+  margin: 50px 0;
+  max-width: 600px;
+  cursor: pointer;
+}
+
+.body .search input[type="text"] {
+  border: 0px;
+  font-size: 1.5em;
+  width: 100%;
+}
+
+.body .search input[type="text"]::placeholder {
+  font-size: 1em;
+}
+.body .search input[type="text"]:focus {
+  outline: none;
+}
+
+.body .search button {
+  background-color: #37b12c;
+  border: 0px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  padding: 6px 15px;
+  color: #fff;
+}
+
+/* media queries */
+@media only screen and (max-width: 1200px) {
+  .top nav {
+    display: none;
+  }
+
+  .top .buttons {
+    display: none;
+  }
+
+  .top .menu {
+    visibility: visible;
+    background-color: #37b12c;
+    border: 0px;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  /* new menu */
+  .banner .new-menu {
+    border: 2px solid sandybrown;
+    position: absolute;
+    background-color: #4d4d4d;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 8;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .banner .new-nav{
+    padding-left: 100px;
+    border: 2px solid sandybrown;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    flex:1;
+  }
+
+  .banner .new-nav li{
+    border-bottom: 1px solid #dbd8d5;
+    margin: 0px;
+    list-style:none;
+  }
+  
+  .new-nav li a:hover{
+    background-color:#7a6e6e ;
+    font-weight: bold;
+  }
+  
+  .new-nav li a{
+    display: block;
+    font-size: 1.2em;
+    padding: 8px 0px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 100;
+    width: 100%;
+    height: 100%;
+    transition: background-color 500ms ease-in-out;
+  }
+
+  .banner .menu{
+    background-color: #37b12c;
+    border: 0px;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .body .search {
+    padding: 7px 15px;
+    margin-top: 50px;
+    max-width: 600px;
+  }
+  .body .search input[type="text"]::placeholder {
+    font-size: 0.7em;
+  }
+  .body .search button {
+    align-items: center;
+    font-size: 1em;
+    padding: 3px 10px;
+    color: #fff;
+  }
+
+  .body div input[type="text"] {
+    font-size: 1.2em;
+  }
+
+  .banner {
+    padding: 0 40px;
+  }
+  
+}
