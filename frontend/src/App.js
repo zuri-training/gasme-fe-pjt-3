@@ -1,11 +1,10 @@
-import './App.css';
+import "./App.css";
+import Main from './landing/Main';
 
 function App() {
-  return (
-    <div className="App">
-      Front-end GAS and ME
-    </div>
-  );
+  return <>
+    <Main />
+  </>;
 }
 
 export default App;
