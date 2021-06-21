@@ -15,6 +15,7 @@
 .content-wrapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-self: center;
   margin-top: 30px;
 }
@@ -37,21 +38,18 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .content-wrapper {
-    flex-direction: column;
-  }
   .content-wrapper img {
     height: 80px;
-    margin: 10px;
+    margin: 5px;
+  }
+
+  .content-wrapper .arr {
+    height: 5px;
+    align-self: center;
   }
 
   .how-wrapper {
     height: auto;
-    padding: 15px;
-  }
-  .content-wrapper .arr {
-    border: 1px solid black;
-    content: url("../assets/arrdown.png");
-    height: 60px;
+    padding: 10px;
   }
 }

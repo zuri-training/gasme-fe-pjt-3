@@ -159,7 +159,6 @@ nav li:hover {
   }
   /* new menu */
   .banner .new-menu {
-    border: 2px solid sandybrown;
     position: absolute;
     background-color: #4d4d4d;
     left: 0;
@@ -174,7 +173,6 @@ nav li:hover {
 
   .banner .new-nav {
     padding-left: 100px;
-    border: 2px solid sandybrown;
     margin: 0px;
     display: flex;
     flex-direction: column;
@@ -206,7 +204,7 @@ nav li:hover {
   }
 
   .banner .menu {
-    background-color: #37b12c;
+    background-color: transparent;
     border: 0px;
     border-radius: 7px;
     cursor: pointer;

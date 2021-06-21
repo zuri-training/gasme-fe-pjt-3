@@ -12,6 +12,10 @@ export default function Footer() {
           <p>
             22 Transon and Structural House,
             <br /> Victoria Island Lagos
+            <br />
+            contact@gas&me.com
+            <br />
+            07090003000
           </p>
           <p>
             <span>
