@@ -1,11 +1,9 @@
 .intouch-wrapper {
-  border: 2px solid orange;
   display: flex;
   flex-direction: column;
 }
 
 .intouch-wrapper .map {
-  border: 2px solid magenta;
   height: 500px;
   position: relative;
 }
@@ -17,7 +15,6 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   content: "";
-  border: 3px solid cyan;
   position: absolute;
   left: 0;
   top: 0;
@@ -42,7 +39,6 @@
 }
 
 .intouch-wrapper .form {
-  border: 2px solid brown;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -51,7 +47,6 @@
 }
 
 .intouch-wrapper form {
-  border: 2px solid brown;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -100,7 +95,6 @@
 
 .intouch-wrapper .contact-info {
   padding: 20px;
-  border: 2px solid brown;
   background-color: #37b12c;
   height: fit-content;
   color: #fff;

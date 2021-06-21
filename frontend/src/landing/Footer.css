@@ -1,5 +1,4 @@
 .footer-wrapper{
-  border:2px solid orange;
   display:flex;
   flex-direction: column;
   background: #4d4d4d;
@@ -7,7 +6,6 @@
 }
 
 .footer-wrapper .footer-body{
-  border:2px solid orange;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -42,14 +40,13 @@
 }
 
 .footer-body div{
-  border:2px solid teal;
   margin:3px
 
 }
 
 .footer-wrapper .ff{
-  border:2px solid orange;
   text-align: center;
+  padding-bottom: 5px;
 }
 
 .ff span{
