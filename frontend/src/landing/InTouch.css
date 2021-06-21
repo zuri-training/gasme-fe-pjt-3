@@ -131,4 +131,10 @@
   .intouch-wrapper form {
     padding: 10px;
   }
+  .intouch-wrapper form > * {
+    width: 250px;
+    height: 40px;
+    font-size: 1.2em;
+    padding: 4px 7px;
+  }
 }
