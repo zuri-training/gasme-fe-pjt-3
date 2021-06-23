@@ -3,12 +3,13 @@
   flex-direction: column;
   padding: 0 80px;
   position: relative;
+  height: 1100px; /* remove when page reduced*/
 }
 
 .banner::after {
   background: url("../assets/bannerImg.png");
   background-position: center center;
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   filter: grayscale(70%);
   content: "";
@@ -75,6 +76,11 @@ nav li:hover {
 
 .buttons .login {
   margin-right: 15px;
+}
+
+.buttons .login-link {
+  text-decoration: none;
+  color: #fff;
 }
 
 .top .buttons button:hover {
@@ -176,7 +182,6 @@ nav li:hover {
     margin: 0px;
     display: flex;
     flex-direction: column;
-    flex: 1;
   }
 
   .banner .new-nav li {
@@ -186,7 +191,7 @@ nav li:hover {
   }
 
   .new-nav li a:hover {
-    background-color: #7a6e6e;
+    background-color: #f1eded;
     font-weight: bold;
   }
 

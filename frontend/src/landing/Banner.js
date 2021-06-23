@@ -1,5 +1,6 @@
 import "./Banner.css";
 import banner from "../assets/logo.png";
+import { Link } from "react-router-dom";
 import Icon from "@mdi/react";
 import { mdiMenu, mdiMagnify, mdiClose } from "@mdi/js";
 import { useState } from "react";
@@ -11,7 +12,7 @@ export default function Banner() {
   };
   return (
     <div className="banner">
-      <div className="new-menu" style={{  display: visibility ? null : "none" }}>
+      <div className="new-menu" style={{ display: visibility ? null : "none" }}>
         <ul className="new-nav">
           <li>
             {" "}
@@ -24,9 +25,9 @@ export default function Banner() {
             <a href="/">Contact Us</a>
           </li>
           <li>
-            <a href="/">Login</a>
+            <Link to="/login">Login</Link>
           </li>
-          <li style={{borderBottom:"0px"}}>
+          <li style={{ borderBottom: "0px" }}>
             <a href="/">Create Account</a>
           </li>
         </ul>
@@ -50,7 +51,7 @@ export default function Banner() {
           <li>Contact Us</li>
         </nav>
         <div className="buttons">
-          <button className="login">Login</button>
+          <button className="login"><Link className="login-link" to="/login">Login</Link></button>
           <button className="acc">Create Account</button>
         </div>
         <button onClick={() => menu()} className="menu">
