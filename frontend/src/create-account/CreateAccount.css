@@ -1,5 +1,4 @@
 .create-acc-container {
-  height: 100vh;
   background: url(../assets/bottomleft.png) left bottom,
     url(../assets/topleft.png) top left, url(../assets/topright.png) top right;
   background-repeat: no-repeat;
@@ -7,6 +6,7 @@
   flex-direction: column;
   align-items: center;
   padding: 0px 10px;
+  min-height: 100vh;
 }
 
 .create-acc-container > * {

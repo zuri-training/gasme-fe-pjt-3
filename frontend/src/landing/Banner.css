@@ -110,6 +110,7 @@ nav li:hover {
   color: #fff;
   font-size: min(max(0.7rem, 2vw), 1.5em);
   margin-top: 100px;
+  font-weight: bold;
 }
 
 .body .search {
