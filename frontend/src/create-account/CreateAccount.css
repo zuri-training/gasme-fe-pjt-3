@@ -80,7 +80,7 @@
   background: #d1e6db;
   flex: 1;
   padding: 15px;
-  font-size: 1.3rem;
+  font-size: 1.3rem;border-radius: 8px;
 }
 
 .create-acc-container .mark {
