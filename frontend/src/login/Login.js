@@ -11,6 +11,7 @@ import {
 import "./Login.css";
 import logo from "../assets/logogreen.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [show, setShow] = useState("-165px");
@@ -63,7 +64,9 @@ export default function Login() {
               <a href="/">Contact Us</a>
             </li>
           </ul>
+          <Link to="/gasme-fe-pjt-3/create-account">
           <button>Create Account</button>
+          </Link>
         </div>
         <div className="hamburger-icon" onClick={() => dropDown("0px")}>
           {" "}

@@ -1,14 +1,16 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
-import Login from "./login/Login";
+import CreateAccount from "./create-account/CreateAccount";
 import Main from "./landing/Main";
+import Login from "./login/Login";
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={Main} />
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/gasme-fe-pjt-3" component={Main} />
+        <Route exact path="/gasme-fe-pjt-3/login" component={Login} />
+        <Route exact path="/gasme-fe-pjt-3/create-account" component={CreateAccount} />
       </Switch>
     </BrowserRouter>
   );

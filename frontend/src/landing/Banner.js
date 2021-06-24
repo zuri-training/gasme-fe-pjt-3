@@ -25,7 +25,7 @@ export default function Banner() {
             <a href="/">Contact Us</a>
           </li>
           <li>
-            <Link to="/login">Login</Link>
+            <Link to="/gasme-fe-pjt-3/login">Login</Link>
           </li>
           <li style={{ borderBottom: "0px" }}>
             <a href="/">Create Account</a>
@@ -51,7 +51,11 @@ export default function Banner() {
           <li>Contact Us</li>
         </nav>
         <div className="buttons">
-          <button className="login"><Link className="login-link" to="/login">Login</Link></button>
+            <Link className="login-link" to="/gasme-fe-pjt-3/login">
+          <button className="login">
+              Login
+          </button>
+            </Link>
           <button className="acc">Create Account</button>
         </div>
         <button onClick={() => menu()} className="menu">
