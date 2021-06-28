@@ -6,32 +6,32 @@ import { mdiMenu, mdiMagnify, mdiClose } from "@mdi/js";
 import { useState } from "react";
 
 export default function Banner() {
-  const [visibility, setVisibility] = useState(false);
-  const menu = () => {
-    setVisibility(!visibility);
+  const [show, setShow] = useState("-205px");
+  const dropDown = (val) => {
+    setShow(val);
   };
   return (
     <div className="banner">
-      <div className="new-menu" style={{ display: visibility ? null : "none" }}>
+      <div className="new-menu" style={{ transform: `translatey(${show})` }}>
         <ul className="new-nav">
           <li>
             {" "}
-            <a href="/">About us</a>
+            <a href="#aboutus">About us</a>
           </li>
           <li>
-            <a href="/">Services</a>
+            <a href="#serv-ices">Services</a>
           </li>
           <li>
-            <a href="/">Contact Us</a>
+            <a href="#contactus">Contact Us</a>
           </li>
           <li>
             <Link to="/gasme-fe-pjt-3/login">Login</Link>
           </li>
           <li style={{ borderBottom: "0px" }}>
-            <a href="/">Create Account</a>
+            <Link to="/gasme-fe-pjt-3/create-account">Create Account</Link>
           </li>
         </ul>
-        <button onClick={() => menu()} className="menu">
+        <button onClick={() => dropDown("-205px")} className="menu">
           <Icon
             path={mdiClose}
             title="menu"
@@ -46,19 +46,25 @@ export default function Banner() {
           <img width="70px" src={banner} alt="" />
         </div>
         <nav>
-          <li>About Us</li>
-          <li>Services</li>
-          <li>Contact Us</li>
+          <li>
+            <a href="#aboutus">About Us</a>
+          </li>
+          <li>
+            <a href="#serv-ices">Services </a>
+          </li>
+          <li>
+            <a href="#contactus">Contact Us </a>
+          </li>
         </nav>
         <div className="buttons">
-            <Link className="login-link" to="/gasme-fe-pjt-3/login">
-          <button className="login">
-              Login
-          </button>
-            </Link>
-          <button className="acc">Create Account</button>
+          <Link className="login-link" to="/gasme-fe-pjt-3/login">
+            <button className="login">Login</button>
+          </Link>
+          <Link to="/gasme-fe-pjt-3/create-account">
+            <button className="acc">Create Account</button>
+          </Link>
         </div>
-        <button onClick={() => menu()} className="menu">
+        <button onClick={() => dropDown("0px")} className="menu">
           <Icon
             path={mdiMenu}
             title="menu"

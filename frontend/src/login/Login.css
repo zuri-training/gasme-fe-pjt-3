@@ -229,7 +229,7 @@
 }
 
 .login-container .menu-items ul li {
-  border-bottom: 1px solid #dbd8d5;
+  border-bottom: 1px solid #9e9c9a;
   margin: 0px;
   list-style: none;
 }
@@ -248,8 +248,8 @@
 }
 
 .login-container .slide-menu li a:hover {
-  background-color: #dbd8d57a;
-  color: #414040;
+  background-color: #464343;
+  color: #fff;
   font-weight: bold;
 }
 

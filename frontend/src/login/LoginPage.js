@@ -70,16 +70,16 @@ export default function LoginPage({ responseData }) {
         <div className="menu-items">
           <ul>
             <li>
-              <a href="/">About us</a>
+            <Link to="/gasme-fe-pjt-3/">About us</Link>
             </li>
             <li>
-              <a href="/">Services</a>
+            <Link to="/gasme-fe-pjt-3/">Services</Link>
             </li>
             <li>
-              <a href="/">Contact us</a>
+            <Link to="/gasme-fe-pjt-3/">Contact us</Link>
             </li>
             <li style={{ borderBottom: "0px" }}>
-              <a href="/">Create Account</a>
+            <Link to="/gasme-fe-pjt-3/create-account">Create Account</Link>
             </li>
           </ul>
         </div>
@@ -100,13 +100,13 @@ export default function LoginPage({ responseData }) {
         <div className="nav">
           <ul>
             <li>
-              <a href="/"> About Us</a>
+              <Link to="/gasme-fe-pjt-3/#aboutus" >About Us</Link> 
             </li>
             <li>
-              <a href="/">Services</a>
+            <Link to="/gasme-fe-pjt-3/#serv-ices">Services</Link>
             </li>
             <li>
-              <a href="/">Contact Us</a>
+            <Link to="/gasme-fe-pjt-3/#contactus">Contact Us</Link>
             </li>
           </ul>
           <Link to="/gasme-fe-pjt-3/create-account">

@@ -4,7 +4,7 @@ import "./InTouch.css";
 
 export default function InTouch() {
   return (
-    <div className="intouch-wrapper">
+    <div className="intouch-wrapper" id="contactus">
       <div className="map">
         <div>
           <h1>Get In Touch</h1>
