@@ -6,7 +6,7 @@
 }
 
 .banner::after {
-  background:rgba(0, 0, 0, 0.6) url("../assets/bannerImg.png");
+  background:rgba(0, 0, 0, 0.6) url("../assets/img/bannerImg.png");
   background-blend-mode:darken;
   background-position: center center;
   background-size: cover;

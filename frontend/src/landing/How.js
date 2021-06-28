@@ -1,10 +1,10 @@
 import "./How.css";
 
-import onegas from "../assets/one-gas.png";
-import arrow from "../assets/arr.png";
-import bike from "../assets/bike.png";
-import phone from "../assets/phone.png";
-import gases from "../assets/3gas.png";
+import onegas from "../assets/img/one-gas.png";
+import arrow from "../assets/img/arr.png";
+import bike from "../assets/img/bike.png";
+import phone from "../assets/img/phone.png";
+import gases from "../assets/img/3gas.png";
 
 export default function How() {
   return (

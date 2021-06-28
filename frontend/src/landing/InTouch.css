@@ -9,7 +9,7 @@
 }
 
 .intouch-wrapper .map::after {
-  background: rgba(0, 0, 0, 0.4) url(../assets/map.png);
+  background: rgba(0, 0, 0, 0.4) url(../assets/img/map.png);
   background-blend-mode: darken;
   background-position: center center;
   background-size: 100% 100%;

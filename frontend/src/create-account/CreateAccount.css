@@ -1,6 +1,7 @@
 .create-acc-container {
-  background: url(../assets/bottomleft.png) left bottom,
-    url(../assets/topleft.png) top left, url(../assets/topright.png) top right;
+  background: url(../assets/img/bottomleft.png) left bottom,
+    url(../assets/img/topleft.png) top left,
+    url(../assets/img/topright.png) top right;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -63,6 +64,13 @@
   border-radius: 8px;
 }
 
+.create-acc-container .address,
+.create-acc-container .name,
+.create-acc-container .number,
+.create-acc-container .email {
+  position: relative;
+}
+
 .create-acc-container .pass,
 .create-acc-container .bus-name {
   display: flex;
@@ -72,6 +80,7 @@
   background: #d1e6db;
   border-radius: 8px;
   padding-right: 10px;
+  position: relative;
 }
 
 .create-acc-container .pass input,
@@ -80,7 +89,8 @@
   background: #d1e6db;
   flex: 1;
   padding: 15px;
-  font-size: 1.3rem;border-radius: 8px;
+  font-size: 1.3rem;
+  border-radius: 8px;
 }
 
 .create-acc-container .mark {
@@ -92,23 +102,23 @@
   color: red;
 }
 
-.create-acc-container .terms{
+.create-acc-container .terms {
   text-align: center;
   font-size: 1rem;
 }
 
-.create-acc-container .terms input[type="checkbox"]{
+.create-acc-container .terms input[type="checkbox"] {
   margin-right: 5px;
-  border:0px
+  border: 0px;
 }
 
 .create-acc-container .google,
-.create-acc-container .create{
+.create-acc-container .create {
   display: flex;
   justify-content: center;
 }
 
-.create-acc-container .create button{
+.create-acc-container .create button {
   background-color: #37b12c;
   color: #fff;
   padding: 13px 73px;
@@ -129,4 +139,13 @@
   border: 1px solid #37b12c;
   font-size: 0.7rem;
   border-radius: 7px;
+}
+
+.create-acc-container .invalid-input {
+  line-height: 1;
+  position: absolute;
+  font-size: 0.88rem;
+  right: 50%;
+  color: red;
+  bottom: -17px;
 }

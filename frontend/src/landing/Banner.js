@@ -1,5 +1,5 @@
 import "./Banner.css";
-import banner from "../assets/logo.png";
+import banner from "../assets/img/logo.png";
 import { Link } from "react-router-dom";
 import Icon from "@mdi/react";
 import { mdiMenu, mdiMagnify, mdiClose } from "@mdi/js";

@@ -1,5 +1,5 @@
 .login-container {
-  background: url(../assets/background.png);
+  background: url(../assets/img/background.png);
   background-repeat: no-repeat;
   background-position-x: right;
   min-height: 100vh;
@@ -11,10 +11,9 @@
   position: relative;
 }
 
-.login-container > *{
+.login-container > * {
   width: 100%;
   max-width: 1630px;
-  
 }
 
 .login-container .top {
@@ -107,10 +106,12 @@
   flex: 1;
   justify-content: space-around;
   margin-top: 100px;
+  position: relative;
 }
 .login-container .main .pass,
 .login-container .main .name {
   max-width: 500px;
+  background-color: transparent;
 }
 
 .login-container .name input {
@@ -246,7 +247,7 @@
   transition: background-color 500ms ease-in-out;
 }
 
-.login-container .slide-menu li a:hover{
+.login-container .slide-menu li a:hover {
   background-color: #dbd8d57a;
   color: #414040;
   font-weight: bold;
@@ -255,6 +256,15 @@
 .login-container .slide-menu .close-icon {
   display: flex;
   justify-content: flex-end;
+}
+
+.login-container .invalid-input {
+  line-height: 1;
+  position: absolute;
+  font-size: 0.88rem;
+  left: 25%;
+  color: red;
+  top: -5px;
 }
 
 @media only screen and (max-width: 800px) {

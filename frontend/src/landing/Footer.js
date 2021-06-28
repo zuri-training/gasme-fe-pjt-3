@@ -1,7 +1,7 @@
 import "./Footer.css";
 import Icon from "@mdi/react";
 import { mdiFacebook, mdiTwitter, mdiInstagram } from "@mdi/js";
-import logo from "../assets/logo.png";
+import logo from "../assets/img/logo.png";
 
 export default function Footer() {
   return (
