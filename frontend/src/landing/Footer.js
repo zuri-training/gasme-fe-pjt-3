@@ -60,7 +60,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="ff">
-        <span>c 2021. Gas & Me. All Rights Reserved.</span>
+        <span> &copy; 2021. Gas & Me. All Rights Reserved.</span>
       </div>
     </div>
   );

@@ -28,7 +28,9 @@
 
 .create-acc-container .content {
   width: 100%;
+  height: fit-content;
   max-width: 600px;
+  margin-top: 30px;
 }
 
 .create-acc-container .content > * {
@@ -52,10 +54,10 @@
   font-size: 2rem;
 }
 
-.create-acc-container .address input,
+/* .create-acc-container .name input, */
 .create-acc-container .number input,
 .create-acc-container .email input,
-.create-acc-container .name input {
+.create-acc-container .address input {
   border: 0px;
   font-size: 1.3rem;
   padding: 15px;
@@ -64,15 +66,15 @@
   border-radius: 8px;
 }
 
-.create-acc-container .address,
-.create-acc-container .name,
+/* .create-acc-container .address,
+.create-acc-container .name, */
 .create-acc-container .number,
 .create-acc-container .email {
   position: relative;
 }
 
-.create-acc-container .pass,
-.create-acc-container .bus-name {
+/* .create-acc-container .bus-name , */
+.create-acc-container .pass {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -82,9 +84,8 @@
   padding-right: 10px;
   position: relative;
 }
-
-.create-acc-container .pass input,
-.create-acc-container .bus-name input {
+/* .create-acc-container .bus-name input, */
+.create-acc-container .pass input {
   border: 0px;
   background: #d1e6db;
   flex: 1;
@@ -98,9 +99,9 @@
   font-weight: bold;
 }
 
-.create-acc-container .bus-name .mark > span {
+/* .create-acc-container .bus-name .mark > span {
   color: red;
-}
+} */
 
 .create-acc-container .terms {
   text-align: center;

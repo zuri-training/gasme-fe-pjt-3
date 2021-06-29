@@ -11,7 +11,6 @@ export default function CreateAccountPage({ responseData }) {
   const [data, setData] = useState({
     email: null,
     password: null,
-    fullName: null,
     phoneNumber: null,
   });
 
@@ -30,13 +29,13 @@ export default function CreateAccountPage({ responseData }) {
 
   const feValidation = useCallback(() => {
     let status = true;
-    if (data.fullName == null || data.fullName.trim().length < 1) {
-      status = false;
-      setResponse((response) => ({
-        ...response,
-        fullName: "please type in a valid username",
-      }));
-    }
+    // if (data.fullName == null || data.fullName.trim().length < 1) {
+    //   status = false;
+    //   setResponse((response) => ({
+    //     ...response,
+    //     fullName: "please type in a valid username",
+    //   }));
+    // }
     if (data.email == null || data.email.trim().length < 1) {
       status = false;
       setResponse((response) => ({
@@ -70,13 +69,7 @@ export default function CreateAccountPage({ responseData }) {
       }));
     }
     return status;
-  }, [
-    data.address,
-    data.email,
-    data.fullName,
-    data.password,
-    data.phoneNumber,
-  ]);
+  }, [data.address, data.email, data.password, data.phoneNumber]);
 
   const sendData = useCallback(() => {
     setData(data);
@@ -95,7 +88,7 @@ export default function CreateAccountPage({ responseData }) {
           <div className="title">
             <h2>Create Account</h2>
           </div>
-          <div className="name">
+          {/* <div className="name">
             <input
               type="text"
               name="fullName"
@@ -114,6 +107,15 @@ export default function CreateAccountPage({ responseData }) {
             <span className="mark">
               seller's Only <span>*</span>
             </span>
+          </div> */}
+          <div className="email">
+            <input
+              type="email"
+              name="email"
+              onChange={setValues}
+              placeholder="Email"
+            />
+            <span className="invalid-input">{response.email}</span>
           </div>
           <div className="pass">
             <input
@@ -132,15 +134,7 @@ export default function CreateAccountPage({ responseData }) {
             </span>
             <span className="invalid-input">{response.password}</span>
           </div>
-          <div className="email">
-            <input
-              type="email"
-              name="email"
-              onChange={setValues}
-              placeholder="Email"
-            />
-            <span className="invalid-input">{response.email}</span>
-          </div>
+          
           <div className="number">
             <input
               type="text"

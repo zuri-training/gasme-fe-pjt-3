@@ -14,17 +14,18 @@
   font-size: min(max(1rem, 3vw), 2em);
 }
 
-.how-wrapper .img-holder{
+.how-wrapper .img-holder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 150px;
+  max-width: 150px;
   margin: 10px;
 }
 
-.how-wrapper .img-holder span{
+.how-wrapper .img-holder span {
   font-weight: bold;
   font-size: 1rem;
+  line-height: 1;
 }
 
 .content-wrapper {
@@ -36,7 +37,7 @@
 }
 
 .content-wrapper img {
-  height: 120px
+  height: 120px;
 }
 
 .content-wrapper .arr {
@@ -54,18 +55,16 @@
     height: 10px;
     align-self: center;
   }
-
-
 }
 
 @media only screen and (max-width: 900px) {
   .content-wrapper img {
-    height: 80px;
-    margin: 5px;
+    height: 70px;
+    margin: 3px;
   }
 
   .content-wrapper .arr {
-    height: 7px;
+    height: 6px;
     align-self: center;
   }
 
@@ -74,13 +73,28 @@
     padding: 10px;
   }
 
-  .how-wrapper .img-holder span{
+  .how-wrapper .img-holder span {
     font-size: 0.8rem;
   }
 
-  .how-wrapper .img-holder{
-    width: 150px;
-  margin: 4px;
+  .how-wrapper .img-holder {
+    max-width: 140px;
+    margin: 0px;
+  }
+}
 
+@media only screen and (max-width: 350px) {
+  .content-wrapper img {
+    height: 45px;
+    margin: 4px;
+  }
+
+  .how-wrapper .img-holder span {
+    font-size: 0.55rem;
+  }
+
+  .how-wrapper .img-holder {
+    width: 100px;
+    margin: 0px;
   }
 }

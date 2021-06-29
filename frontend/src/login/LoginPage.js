@@ -130,7 +130,7 @@ export default function LoginPage({ responseData }) {
             <p>Log in</p>
             <h1>Consumer's Account</h1>
             <p id="welcome">
-              <span className="mark">Welcome back!</span> Log in to access your
+              <span id="login-welcome" className="mark">Welcome back!</span> Log in to access your
               account
             </p>
           </div>

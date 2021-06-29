@@ -262,9 +262,9 @@
   line-height: 1;
   position: absolute;
   font-size: 0.88rem;
-  left: 25%;
+  left: 0;
   color: red;
-  top: -5px;
+  top: -10px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -283,5 +283,9 @@
     justify-content: flex-end;
     transform: translatey(-165px);
     transition: transform 0.3s ease-in;
+  }
+
+  #login-welcome{
+    color: rgba(10, 49, 6, 0.849);
   }
 }
