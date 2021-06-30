@@ -54,10 +54,10 @@
   font-size: 2rem;
 }
 
-/* .create-acc-container .name input, */
+/* .create-acc-container .address input , */
+.create-acc-container .name input,
 .create-acc-container .number input,
-.create-acc-container .email input,
-.create-acc-container .address input {
+.create-acc-container .email input {
   border: 0px;
   font-size: 1.3rem;
   padding: 15px;
@@ -66,8 +66,8 @@
   border-radius: 8px;
 }
 
-/* .create-acc-container .address,
-.create-acc-container .name, */
+/* .create-acc-container .address, */
+.create-acc-container .name,
 .create-acc-container .number,
 .create-acc-container .email {
   position: relative;

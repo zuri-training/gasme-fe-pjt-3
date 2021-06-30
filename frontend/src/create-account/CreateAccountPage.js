@@ -9,6 +9,7 @@ export default function CreateAccountPage({ responseData }) {
   const { postNewAccData } = useContext(context);
   const [response, setResponse] = useState({});
   const [data, setData] = useState({
+    fullName:null,
     email: null,
     password: null,
     phoneNumber: null,
@@ -29,34 +30,34 @@ export default function CreateAccountPage({ responseData }) {
 
   const feValidation = useCallback(() => {
     let status = true;
-    // if (data.fullName == null || data.fullName.trim().length < 1) {
-    //   status = false;
-    //   setResponse((response) => ({
-    //     ...response,
-    //     fullName: "please type in a valid username",
-    //   }));
-    // }
+    if (data.fullName == null || data.fullName.trim().length < 1) {
+      status = false;
+      setResponse((response) => ({
+        ...response,
+        fullName: "Please type in a valid name.",
+      }));
+    }
     if (data.email == null || data.email.trim().length < 1) {
       status = false;
       setResponse((response) => ({
         ...response,
-        email: "please type in a valid email",
+        email: "Please type in a valid email.",
       }));
     }
     if (data.password == null || data.password.trim().length < 6) {
       status = false;
       setResponse((response) => ({
         ...response,
-        password: "Password must be at least six characters",
+        password: "Password must be at least six characters.",
       }));
     }
-    if (data.address == null || data.address.trim().length < 1) {
-      status = false;
-      setResponse((response) => ({
-        ...response,
-        address: "please type in a valid address",
-      }));
-    }
+    // if (data.address == null || data.address.trim().length < 1) {
+    //   status = false;
+    //   setResponse((response) => ({
+    //     ...response,
+    //     address: "Please type in a valid address.",
+    //   }));
+    // }
     if (
       data.phoneNumber == null ||
       data.phoneNumber.trim().length < 1 ||
@@ -65,11 +66,11 @@ export default function CreateAccountPage({ responseData }) {
       status = false;
       setResponse((response) => ({
         ...response,
-        phoneNumber: "please type in a valid number",
+        phoneNumber: "Please type in a valid number.",
       }));
     }
     return status;
-  }, [data.address, data.email, data.password, data.phoneNumber]);
+  }, [data.email, data.fullName, data.password, data.phoneNumber]);
 
   const sendData = useCallback(() => {
     setData(data);
@@ -88,16 +89,16 @@ export default function CreateAccountPage({ responseData }) {
           <div className="title">
             <h2>Create Account</h2>
           </div>
-          {/* <div className="name">
+          <div className="name">
             <input
               type="text"
               name="fullName"
               onChange={setValues}
-              placeholder="Username"
+              placeholder="Full Name"
             />
             <span className="invalid-input">{response.fullName}</span>
           </div>
-          <div className="bus-name">
+          {/* <div className="bus-name">
             <input
               type="text"
               name="businessName"
@@ -144,7 +145,7 @@ export default function CreateAccountPage({ responseData }) {
             />
             <span className="invalid-input">{response.phoneNumber}</span>
           </div>
-          <div className="address">
+          {/* <div className="address">
             <input
               type="text"
               name="address"
@@ -152,7 +153,7 @@ export default function CreateAccountPage({ responseData }) {
               placeholder="Address"
             />
             <span className="invalid-input">{response.address}</span>
-          </div>
+          </div> */}
           <div className="terms">
             <input type="checkbox" name="acceptTerms" onChange={setValues} />
             <span>
