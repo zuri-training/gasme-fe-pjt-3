@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Status from 'react-multiselect-checkboxes';
  
 
@@ -8,7 +8,7 @@ import profile from "../../img/dp.jpeg";
 import './cd.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-function cdheader(props) {
+function Cdheader(props) {
   
   const options = [
     { label: 'Rating', value: 1},
@@ -29,15 +29,29 @@ function cdheader(props) {
     }),
     singleValue: (provided, state) => {
       const opacity = state.isDisabled ? 0.5 : 1;
-      const transition = 'opacity 300ms';
+      const transition = 'opacity 700ms';
   
       return { ...provided, opacity, transition };
     }
   }
-  
-  return (
-    
-    <header className="cd-header">
+
+const [data, setData] = useState([])
+
+ function getCustomerName() {
+   
+   fetch("https://gas-and-me-api.herokuapp.com/user/60d9ac275cc71800157e166b")
+   .then((res) => res.json())
+   .then((json) => {
+          console.log(json);
+          setData(json)
+   })
+ }
+ 
+ 
+ 
+ return (
+   
+   <header className="cd-header">
       <div className="cd-left">
         <div className="cd-logo">
           <img src={logo} alt="logo" />
@@ -45,13 +59,12 @@ function cdheader(props) {
 
         <div className="cd-greetings">
           <img src={profile} alt="profile" className="cd-profile-img" />
-          <p>Hello,<strong id="seller-name"> {props.name}</strong> <br /> What do you want to do today?</p>
+          <p>Hello,<strong id="seller-name">{JSON.stringify(data.fullName)} </strong> <br /> What do you want to do today?</p>
         </div>
       </div>
 
       <div className="cd-right">
         <nav>
-
         <FontAwesomeIcon icon="search" className="cd-search-icon" />
         <input type="text" name="search" className="cd-search active" placeholder="Search vendor, Gas Station or Service" />
         <button>Search</button>
@@ -64,8 +77,9 @@ function cdheader(props) {
         </div>
       </div>
       
+{/* <button onClick={getCustomerName}>click</button> */}
     </header>
 
   )
 }
-export default cdheader;
+export default Cdheader;

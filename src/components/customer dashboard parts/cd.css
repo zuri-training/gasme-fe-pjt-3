@@ -110,20 +110,7 @@
   display: flex;
   justify-content: center;
 }
-.cd-status {
-  width: 170px;
-  height: auto;
-  padding: 10px;
-  font-size: 18px;
-  text-align: center;
-  background: inherit;
-  border: 1px solid #3ec02d;
-  border-radius: 5px;
-  
-  appearance: none;
- 
 
-}
 @media only screen and (max-width: 950px) {
   .cd-header {
     flex-direction: column;
@@ -182,7 +169,7 @@
     padding-left: 35px;
     font-size: 15px;
 }
-.cd-right button {
+.cd-right nav button {
   width: 100px;
   height: 45px;
   font-size: 18px;

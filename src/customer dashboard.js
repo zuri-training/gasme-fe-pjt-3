@@ -21,7 +21,6 @@ function Customer() {
   const [toggle, setToggle] = useState(false) ;
   const toggler = () => {
 
-    console.log(29); 
     setToggle((prev) => !prev)
       
   };
