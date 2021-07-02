@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+  a {
+    color: inherit;
+  }
+  body {
+    position: relative;
+    color: black;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../../assets/img/Group 24.svg");   
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 60% 70%;
+    background-size: 40%;
+  }
+  .sd-header {
+    width: 100%;
+    height: 150px;
+    padding: 20px 0;
+    margin-bottom: 5px;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .sd-left {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+  .sd-logo {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .sd-logo img {
+    height: 90%;
+    padding: 5px;
+  }
+  .sd-greetings {
+    display: flex;
+    width: 75%;
+    height: 100%;
+    font-size: 18px;
+    line-height: 1.5em;
+    align-items: center;
+  }
+  .sd-profile-img {
+    height: 67%;
+    width: 70px;
+    margin: 0 20px 0 20%;
+    border-radius: 50%;
+  }
+  .sd-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media only screen and (max-width: 950px) {
+    .sd-header {
+      flex-direction: column;
+      height: auto;
+      width: 100vw;
+    }
+    .sd-left {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
+    }
+    .sd-logo {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      justify-content: center;
+    }
+    .sd-greetings {
+      width: 100%;
+      height: 40%;
+      margin: 15px auto;
+      font-size: 18px;
+      line-height: 1.5em;
+      align-items: center;
+    }
+    .sd-profile-img {
+      height: 67%;
+      width: 70px;
+      margin: 0 20px 0 auto;
+      border-radius: 50%;
+    }
+    .sd-greetings p {
+      margin-right: auto;
+    }
+    .sd-right {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+  }
+  
+  mainsd {
+    display: flex;
+    justify-content: space-between;
+    height: 88%;
+    position: relative;
+
+  }
+  @media only screen and (max-width: 950px) {
+    mainsd {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+    }
+    .sd-section {
+      width: 100%;
+      margin-top: 100px;
+    }
+    table {
+      min-width: 100%;
+    }
+    tr {
+      min-width: 100%;
+    }
+    
+}
+  .sd-aside {
+    width: 17%;
+    height: 600px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgb(79, 194, 123);
+    border-left: 4px solid rgb(79, 194, 123);
+  }
+  .sd-new-aside {
+    width: 17%;
+    height: 600px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgb(79, 194, 123);
+    border-left: 4px solid rgb(79, 194, 194);
+  }
+  
+  .sd-menu-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 80%;
+    width: 100%;
+  }
+  .sd-menu {
+    width: 90%;
+    height: 2.8em;
+    line-height: 1.5em;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    border-radius: 10px 0 0 10px;  
+    transition: all 0.3s ease-in-out;
+  }
+  .sd-menu:hover {
+    background: rgb(79, 194, 123, 0.6);
+  }
+  .sd-menu.active {
+    background: rgb(79, 194, 123);
+    height: fit-content;
+  }
+  
+  .sd-menu:first-of-type {
+    margin-top: 25%;
+  }
+  .sd-logout {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .sd-log-menu {
+    width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(79, 194, 123);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  aside .icon {
+    margin: 0 20px;
+    color: rgb(78, 73, 73);
+  }
+  .sd-hamburger {
+    display: none;
+    columns: #fff;
+  }
+  @media only screen and (max-width: 950px) {
+    .sd-hamburger {
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 2px;
+      font-size: 3em;
+      cursor: pointers;
+      color: rgb(79, 194, 123);
+      z-index: 99;
+      transition: all 0.9s ease-in-out;
+    }
+  .sd-aside {
+    display: none;
+    
+  }
+  .sd-new-aside {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 15px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(71, 68, 63);
+    border: none;
+    transition: all 0.8s ease-in-out;
+    
+  }
+  .sd-menu-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 80%;
+    width: 100%;
+  }
+  .sd-menu {
+    width: 90%;
+    height: 2em;
+    padding: 15px 0;
+    border-radius: 10px 0 0 10px;  
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .sd-menu:hover {
+    background: rgb(196, 192, 175);
+  }
+  .sd-menu.active {
+    background: rgb(79, 194, 123);
+  }
+  
+  .sd-menu:first-of-type {
+    margin-top: 2%;
+  }
+  .sd-logout {
+    height: 20%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sd-log-menu {
+    width: 100%;
+  }
+  
+  }
+  @media only screen and (max-width: 500px) {
+    .sd-hamburger {
+      top: 5px;
+      left: 40px;
+    }
+    .sd-menu:first-of-type {
+      margin-top: 17%;
+    } 
+  }
+  
+  .sd-section {
+    width: 83.5%;
+    height: 100%;
+    margin: 30px;
+    display: flex;
+    
+  }
+  
+  table {
+    width: 100%;
+  }
+  tr {
+    height: 70px;
+    width: 90%;
+    margin: 5px 10px;
+    display: flex;
+    align-items: center;
+  }
+  tr:nth-of-type(2n) {
+    background: rgb(79, 194, 123, 0.5);
+  }
+  th, td {
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    margin: auto;
+    padding: 5px;
+  }
+  td:nth-of-type(2) {
+    justify-content: left;
+  }
+  
+  td img {
+    height: 70%;
+    width: 50px;
+    margin: 0 15px 0 0;
+    border-radius: 50%;
+  }
+
+  

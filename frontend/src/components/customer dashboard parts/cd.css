@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+  a {
+    color: inherit;
+  }
+  body {
+    color: black;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../../assets/img/Group 24.svg");   
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 60% 70%;
+    background-size: 40%;
+  }
+  .cd-header {
+    width: 100%;
+    height: 150px;
+    padding: 20px 0;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+  }
+  .cd-left {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+  .cd-logo {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .cd-logo img {
+    height: 90%;
+    padding: 5px;
+  }
+  .cd-greetings {
+    display: flex;
+    width: 75%;
+    height: 100%;
+    font-size: 18px;
+    line-height: 1.5em;
+    align-items: center;
+  }
+  .cd-profile-img {
+    height: 67%;
+    width: 70px;
+    margin: 0 20px 0 20%;
+    border-radius: 50%;
+  }
+  .cd-right {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cd-right nav {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .cd-search {
+    width: 80%;
+    height: 40%;
+    padding-left: 35px;
+    font-size: 17px;
+    color: grey;
+    border: 3px solid rgb(79, 194, 123, 0.5);
+    border-radius: 10px;
+    background: rgb(228, 206, 165, 0.5);
+    outline: none;
+    transition: all 0.3s ease-in-out;
+  
+  }
+  .cd-search-icon {
+    color: grey;
+    font-size: 17px;
+    position: absolute;
+    left: 11%;
+    z-index: 3;
+  }
+.cd-right nav button {
+  padding: 5px;
+  width: 100px;
+  height: 40%;
+  font-size: 18px;
+  color: whitesmoke;
+  background: rgba(36, 175, 89, 0.8);
+  border: none;
+  border-radius: 7px;
+  position: absolute;
+  right: 6.5%;
+  z-index: 3;
+}
+
+.cd-status-div {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 950px) {
+  .cd-header {
+    flex-direction: column;
+    height: auto;
+    width: 100vw;
+  }
+  .cd-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  .cd-logo {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  .cd-greetings {
+    width: 100%;
+    height: 40%;
+    margin: 15px 0;
+    font-size: 18px;
+    line-height: 1.5em;
+    align-items: center;
+  }
+  .cd-profile-img {
+    height: 70%;
+    width: 60px;
+    margin: 0 20px 0 auto;
+    border-radius: 50%;
+  }
+  .cd-greetings p {
+    margin-right: auto;
+  }
+  .cd-right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cd-right nav {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .cd-search {
+    width: 80%;
+    height: 40px;
+    padding-left: 35px;
+    font-size: 15px;
+}
+.cd-right nav button {
+  width: 100px;
+  height: 45px;
+  font-size: 18px;
+  right: 5.2%;
+  cursor: pointer;
+}
+}
+  
+  maincd {
+    display: flex;
+    justify-content: space-between;
+    height: 88%;
+    position: relative;
+    
+  }
+  @media only screen and (max-width: 950px) {
+      maincd {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+      }
+      .cd-section {
+        width: 100%;
+        margin-top: 100px;
+      }
+      .seller-list {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .sellers {
+        min-width: 40%;
+      }
+      
+  }
+  @media only screen and (max-width: 450px) {
+    maincd {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+    }
+    .cd-section {
+      width: 100%;
+    }
+    .seller-list {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .sellers {
+      min-width: 70%;
+    }
+    
+}
+  .cd-aside {
+    width: 16%;
+    height: 600px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgb(79, 194, 123);
+    border-left: 4px solid rgb(79, 194, 123);
+  }
+  .cd-new-aside {
+    width: 17%;
+    height: 600px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgb(79, 194, 123);
+    border-left: 4px solid rgb(79, 194, 123);
+  }
+  .cd-menu-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 80%;
+    width: 100%;
+  }
+  .cd-menu {
+    width: 90%;
+    height: 2.8em;
+    padding: 15px 0;
+    margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 10px 0 0 10px;  
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .cd-menu:hover {
+    background: rgb(79, 194, 123, 0.6);
+  }
+  
+  .cd-menu.active {
+    background: rgb(79, 194, 123);
+  }
+  
+  .cd-menu:first-of-type {
+    margin-top: 25%;
+  }
+  .cd-logout {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cd-log-menu {
+    width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(79, 194, 123);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  aside .icon {
+    margin: 0 20px;
+    color: gray;
+  }
+  .cd-hamburger {
+    display: none;
+    columns: #fff;
+  }
+  @media only screen and (max-width: 950px) {
+    .cd-hamburger {
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 2px;
+      font-size: 3em;
+      cursor: pointers;
+      color: rgb(79, 194, 123);
+      z-index: 99;
+      transition: all 0.9s ease-in-out;
+    }
+  .cd-aside {
+    display: none;
+    
+  }
+  .cd-new-aside {
+    width: 100%;
+    height: fit-content;
+    font-size: 25px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(78, 76, 72);
+    border: none;
+    transition: all 0.8s ease-in-out;
+    
+  }
+  .cd-menu-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 80%;
+    width: 100%;
+  }
+  .cd-menu {
+    width: 90%;
+    height: 2em;
+    padding: 15px 0;
+    border-radius: 10px 0 0 10px;  
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .cd-menu:hover {
+    background: rgb(196, 192, 175);
+  }
+  .cd-menu.active {
+    background: rgb(79, 194, 123);
+  }
+  
+  .cd-menu:first-of-type {
+    margin-top: 1%;
+  }
+  .cd-logout {
+    height: 20%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cd-log-menu {
+    width: 100%;
+  }
+  
+  }
+  @media only screen and (max-width: 500px) {
+    .cd-hamburger {
+      top: 5px;
+      left: 40px;
+    }
+    .cd-menu:first-of-type {
+      margin-top: 17%;
+    } 
+  }
+  section {
+    width: 83%;
+    height: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .home-nav {
+    width: fit-content;
+    font-size: 22px;
+    padding: 10px;
+    margin: 0 auto 0 12%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border-bottom: 5px solid green;
+    font-weight: bold;
+  }
+  .seller-list {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+  }
+  
+  .sellers {
+    width: 26%;
+    height: 400px;
+    margin: 40px;
+    font-size: 21px;
+    line-height: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    cursor: pointer;
+  }
+  .sellers img {
+    width: 100%;
+    height: 75%;
+    margin-bottom: auto;
+  }
+  .sellers p {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px auto 0;
+    font-size: 18px;
+  }
+  
+  .sellers i {
+    color: rgb(36, 196, 89);
+  }
+  .sellers small {
+    font-size: 0.9em;
+    color: rgb(185, 182, 182);
+  } 
+  b {
+    margin-left: 70px;
+    color: rgb(36, 196, 89);
+  }
