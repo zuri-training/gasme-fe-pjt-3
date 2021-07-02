@@ -285,7 +285,7 @@
     transition: transform 0.3s ease-in;
   }
 
-  #login-welcome{
+  .login-container #login-welcome{
     color: rgba(10, 49, 6, 0.849);
   }
 }

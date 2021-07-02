@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { context } from "../assets/environ/context";
-import LoginPage from "./LoginPage";
+// import LoginPage from "./LoginPage";
+import ConsumerDashboard from '../consumer-dashboard/ConsumerDashboard';
 
 export default function Login() {
   const { loginResponse } = useContext(context);
@@ -22,8 +23,10 @@ export default function Login() {
   return (
     <>
       {loginResponse.error ? (
-        <LoginPage responseData={userData} />
+        <ConsumerDashboard />
+        // <LoginPage responseData={userData} />
       ) : (
+          // <ConsumerDashboard />
         JSON.stringify(userData)
       )}
     </>

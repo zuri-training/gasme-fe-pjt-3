@@ -23,7 +23,7 @@
   z-index: -1;
 }
 
-.map div {
+.intouch-wrapper .map div {
   margin-top: 70px;
   margin-left: 70px;
 }
@@ -33,7 +33,7 @@
   color: #ffde5a;
 }
 
-.map div h3 {
+.intouch-wrapper .map div h3 {
   font-size: min(max(1rem, 3vw), 1.5em);
   color: #ffde5a;
 }

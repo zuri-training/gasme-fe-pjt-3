@@ -6,12 +6,12 @@
 }
 
 .banner::after {
-  background:rgba(0, 0, 0, 0.6) url("../assets/img/bannerImg.png");
-  background-blend-mode:darken;
+  background: rgba(0, 0, 0, 0.6) url("../assets/img/bannerImg.png");
+  background-blend-mode: darken;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  
+
   content: "";
   position: absolute;
   left: 0;
@@ -35,11 +35,11 @@
   visibility: hidden;
 }
 
-.top .logo {
+.banner .top .logo {
   margin-right: auto;
 }
 
-.top nav {
+.banner .top nav {
   height: 40px;
   display: flex;
   flex-direction: row;
@@ -49,10 +49,10 @@
   margin-right: 100px;
 }
 
-nav li {
+.banner .top nav li {
   list-style: none;
 }
-nav li a{
+.banner .top nav li a {
   font-size: 1.2em;
   letter-spacing: 1px;
   font-weight: bold;
@@ -61,12 +61,12 @@ nav li a{
   color: #fff;
 }
 
-nav li a:hover {
+.banner nav li a:hover {
   border-bottom: 3px solid #10e048;
   font-size: 1.3em;
 }
 
-.top .buttons button {
+.banner .top .buttons button {
   font-size: 1em;
   padding: 10px 30px;
   border-radius: 5px;
@@ -78,21 +78,21 @@ nav li a:hover {
   cursor: pointer;
 }
 
-.buttons .login {
+.banner .buttons .login {
   margin-right: 15px;
 }
 
-.buttons .login-link {
+.banner .buttons .login-link {
   text-decoration: none;
   color: #fff;
 }
 
-.top .buttons button:hover {
+.banner .top .buttons button:hover {
   background-color: #deeee5;
   color: #299445;
 }
 
-.top .menu {
+.banner .top .menu {
   visibility: hidden;
 }
 
@@ -104,20 +104,20 @@ nav li a:hover {
   z-index: 2;
 }
 
-.big-text h1 {
+.banner .big-text h1 {
   color: #ffe81b;
   font-size: min(max(1rem, 4vw), 4.5em);
   margin-top: 90px;
 }
 
-.body .small-text {
+.banner .body .small-text {
   color: #fff;
   font-size: min(max(0.7rem, 2vw), 1.5em);
   margin-top: 100px;
   font-weight: bold;
 }
 
-.body .search {
+.banner .body .search {
   display: flex;
   background-color: #fff;
   border-radius: 7px;
@@ -128,20 +128,20 @@ nav li a:hover {
   cursor: pointer;
 }
 
-.body .search input[type="text"] {
+.banner .body .search input[type="text"] {
   border: 0px;
   font-size: 1.5em;
   width: 100%;
 }
 
-.body .search input[type="text"]::placeholder {
+.banner .body .search input[type="text"]::placeholder {
   font-size: 1em;
 }
-.body .search input[type="text"]:focus {
+.banner .body .search input[type="text"]:focus {
   outline: none;
 }
 
-.body .search button {
+.banner .body .search button {
   background-color: #37b12c;
   border: 0px;
   border-radius: 5px;
@@ -154,15 +154,15 @@ nav li a:hover {
 
 /* media queries */
 @media only screen and (max-width: 1200px) {
-  .top nav {
+  .banner .top nav {
     display: none;
   }
 
-  .top .buttons {
+  .banner .top .buttons {
     display: none;
   }
 
-  .top .menu {
+  .banner .top .menu {
     visibility: visible;
     background-color: #37b12c;
     border: 0px;
@@ -200,12 +200,12 @@ nav li a:hover {
     list-style: none;
   }
 
-  .new-nav li a:hover {
+  .banner .new-nav li a:hover {
     background-color: #464343;
     font-weight: bold;
   }
 
-  .new-nav li a {
+  .banner .new-nav li a {
     display: block;
     font-size: 1.2em;
     padding: 8px 0px;
@@ -227,22 +227,22 @@ nav li a:hover {
 }
 
 @media only screen and (max-width: 800px) {
-  .body .search {
+  .banner .body .search {
     padding: 7px 15px;
     margin-top: 50px;
     max-width: 600px;
   }
-  .body .search input[type="text"]::placeholder {
+  .banner .body .search input[type="text"]::placeholder {
     font-size: 0.7em;
   }
-  .body .search button {
+  .banner .body .search button {
     align-items: center;
     font-size: 1em;
     padding: 3px 10px;
     color: #fff;
   }
 
-  .body div input[type="text"] {
+  .banner .body div input[type="text"] {
     font-size: 1.2em;
   }
 
