@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/gasme-fe-pjt-3/static/css/main.ae7ebfcb.chunk.css",
-    "main.js": "/gasme-fe-pjt-3/static/js/main.c92104e4.chunk.js",
-    "main.js.map": "/gasme-fe-pjt-3/static/js/main.c92104e4.chunk.js.map",
+    "main.css": "/gasme-fe-pjt-3/static/css/main.4ca61c18.chunk.css",
+    "main.js": "/gasme-fe-pjt-3/static/js/main.668afdfe.chunk.js",
+    "main.js.map": "/gasme-fe-pjt-3/static/js/main.668afdfe.chunk.js.map",
     "runtime-main.js": "/gasme-fe-pjt-3/static/js/runtime-main.b8a674f5.js",
     "runtime-main.js.map": "/gasme-fe-pjt-3/static/js/runtime-main.b8a674f5.js.map",
-    "static/js/2.cadf0258.chunk.js": "/gasme-fe-pjt-3/static/js/2.cadf0258.chunk.js",
-    "static/js/2.cadf0258.chunk.js.map": "/gasme-fe-pjt-3/static/js/2.cadf0258.chunk.js.map",
+    "static/js/2.c1457624.chunk.js": "/gasme-fe-pjt-3/static/js/2.c1457624.chunk.js",
+    "static/js/2.c1457624.chunk.js.map": "/gasme-fe-pjt-3/static/js/2.c1457624.chunk.js.map",
     "index.html": "/gasme-fe-pjt-3/index.html",
-    "static/css/main.ae7ebfcb.chunk.css.map": "/gasme-fe-pjt-3/static/css/main.ae7ebfcb.chunk.css.map",
-    "static/js/2.cadf0258.chunk.js.LICENSE.txt": "/gasme-fe-pjt-3/static/js/2.cadf0258.chunk.js.LICENSE.txt",
+    "static/css/main.4ca61c18.chunk.css.map": "/gasme-fe-pjt-3/static/css/main.4ca61c18.chunk.css.map",
+    "static/js/2.c1457624.chunk.js.LICENSE.txt": "/gasme-fe-pjt-3/static/js/2.c1457624.chunk.js.LICENSE.txt",
     "static/media/3gas.344dbe50.png": "/gasme-fe-pjt-3/static/media/3gas.344dbe50.png",
     "static/media/About.css": "/gasme-fe-pjt-3/static/media/about.6b878d1a.png",
     "static/media/altImg.8d7f1054.jpg": "/gasme-fe-pjt-3/static/media/altImg.8d7f1054.jpg",
     "static/media/Login.css": "/gasme-fe-pjt-3/static/media/background.f98fbbd3.png",
     "static/media/Banner.css": "/gasme-fe-pjt-3/static/media/bannerImg.c4d55ff7.png",
-    "static/media/ConsumerDashboard.css": "/gasme-fe-pjt-3/static/media/biglogo.2e1a50ce.png",
+    "static/media/SellerDashboard.css": "/gasme-fe-pjt-3/static/media/biglogo.2e1a50ce.png",
     "static/media/bike.a1819f59.png": "/gasme-fe-pjt-3/static/media/bike.a1819f59.png",
     "static/media/InTouch.css": "/gasme-fe-pjt-3/static/media/map.579f8361.png",
     "static/media/one-gas.a7fcd3c8.png": "/gasme-fe-pjt-3/static/media/one-gas.a7fcd3c8.png",
@@ -23,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b8a674f5.js",
-    "static/js/2.cadf0258.chunk.js",
-    "static/css/main.ae7ebfcb.chunk.css",
-    "static/js/main.c92104e4.chunk.js"
+    "static/js/2.c1457624.chunk.js",
+    "static/css/main.4ca61c18.chunk.css",
+    "static/js/main.668afdfe.chunk.js"
   ]
 }
