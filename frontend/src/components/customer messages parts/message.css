@@ -7,7 +7,6 @@
     color: inherit;
   }
   body {
-    position: relative;
     color: black;
     height: auto;
     display: flex;
@@ -18,33 +17,31 @@
     background-position: 60% 70%;
     background-size: 40%;
   }
-  .sd-header {
+  .cm-header {
     width: 100%;
     height: 150px;
     padding: 20px 0;
-    margin-bottom: 5px;
     display: flex;
     transition: all 0.3s ease-in-out;
   }
-  
-  .sd-left {
+  .cm-left {
     width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
   
   }
-  .sd-logo {
+  .cm-logo {
     width: 25%;
     height: 100%;
     display: flex;
     justify-content: center;
   }
-  .sd-logo img {
+  .cm-logo img {
     height: 90%;
     padding: 5px;
   }
-  .sd-greetings {
+  .cm-greetings {
     display: flex;
     width: 75%;
     height: 100%;
@@ -52,40 +49,32 @@
     line-height: 1.5em;
     align-items: center;
   }
-  .sd-profile-img {
+  .cm-profile-img {
     height: 67%;
     width: 70px;
     margin: 0 20px 0 20%;
     border-radius: 50%;
   }
-  .sd-right {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
   @media only screen and (max-width: 950px) {
-    .sd-header {
+    .cm-header {
       flex-direction: column;
       height: auto;
       width: 100vw;
     }
-    .sd-left {
+    .cm-left {
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
     
     }
-    .sd-logo {
+    .cm-logo {
       width: 100%;
       height: 50%;
       display: flex;
       justify-content: center;
     }
-    .sd-greetings {
+    .cm-greetings {
       width: 100%;
       height: 40%;
       margin: 15px auto;
@@ -93,51 +82,43 @@
       line-height: 1.5em;
       align-items: center;
     }
-    .sd-profile-img {
+    .cm-profile-img {
       height: 67%;
       width: 70px;
       margin: 0 20px 0 auto;
       border-radius: 50%;
     }
-    .sd-greetings p {
+    .cm-greetings p {
       margin-right: auto;
     }
-    .sd-right {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    
   }
-  
-  mainsd {
+
+  maincm {
     display: flex;
     justify-content: space-between;
     height: 88%;
     position: relative;
-
+    
   }
   @media only screen and (max-width: 950px) {
-    mainsd {
+    maincm {
       display: flex;
       flex-direction: column;
       width: 100vw;
     }
-    .sd-section {
-      width: 100%;
+    .cm-section {
+      min-width: 100%;
       margin-top: 100px;
     }
-    table {
-      min-width: 100%;
-    }
-    tr {
-      min-width: 100%;
-    }
     
+    .cm-aside {
+      min-width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+
 }
-  .sd-aside {
+  .cm-aside {
     width: 17%;
     height: 600px;
     font-size: 20px;
@@ -145,53 +126,55 @@
     flex-direction: column;
     border: 3px solid rgb(79, 194, 123);
     border-left: 4px solid rgb(79, 194, 123);
+  
   }
-  .sd-new-aside {
+  .cm-new-aside {
     width: 17%;
     height: 600px;
     font-size: 20px;
     display: flex;
     flex-direction: column;
     border: 3px solid rgb(79, 194, 123);
-    border-left: 4px solid rgb(79, 194, 194);
-  }
+    border-left: 4px solid rgb(79, 194, 123);
   
-  .sd-menu-bar {
+  }
+  .cm-menu-bar {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     height: 80%;
     width: 100%;
   }
-  .sd-menu {
+  .cm-menu {
     width: 90%;
     height: 2.8em;
-    line-height: 1.5em;
     padding: 15px 0;
+    margin-bottom: 5px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     border-radius: 10px 0 0 10px;  
     transition: all 0.3s ease-in-out;
+  
   }
-  .sd-menu:hover {
+  .cm-menu:hover {
     background: rgb(79, 194, 123, 0.6);
   }
-  .sd-menu.active {
+  .cm-menu.active {
     background: rgb(79, 194, 123);
-    height: fit-content;
   }
   
-  .sd-menu:first-of-type {
-    margin-top: 25%;
+  .cm-menu:first-of-type {
+    margin-top: 15%;
   }
-  .sd-logout {
+  .cm-logout {
     height: 20%;
     width: 100%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
   }
-  .sd-log-menu {
+  .cm-log-menu {
     width: 60%;
     padding: 10px;
     border-radius: 10px;
@@ -204,14 +187,14 @@
   
   aside .icon {
     margin: 0 20px;
-    color: rgb(78, 73, 73);
+    color: gray;
   }
-  .sd-hamburger {
+  .cm-hamburger {
     display: none;
     columns: #fff;
   }
   @media only screen and (max-width: 950px) {
-    .sd-hamburger {
+    .cm-hamburger {
       display: block;
       position: absolute;
       top: 5px;
@@ -222,11 +205,11 @@
       z-index: 99;
       transition: all 0.9s ease-in-out;
     }
-  .sd-aside {
+  .cm-aside {
     display: none;
     
   }
-  .sd-new-aside {
+  .cm-new-aside {
     width: 100%;
     height: fit-content;
     padding-bottom: 15px;
@@ -234,19 +217,19 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: rgb(71, 68, 63);
+    background: rgb(78, 76, 72);
     border: none;
     transition: all 0.8s ease-in-out;
     
   }
-  .sd-menu-bar {
+  .cm-menu-bar {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     height: 80%;
     width: 100%;
   }
-  .sd-menu {
+  .cm-menu {
     width: 90%;
     height: 2em;
     padding: 15px 0;
@@ -254,78 +237,86 @@
     transition: all 0.3s ease-in-out;
     cursor: pointer;
   }
-  .sd-menu:hover {
+  .cm-menu:hover {
     background: rgb(196, 192, 175);
   }
-  .sd-menu.active {
+  .cm-menu.active {
     background: rgb(79, 194, 123);
   }
   
-  .sd-menu:first-of-type {
-    margin-top: 2%;
+  .cm-menu:first-of-type {
+    margin-top: 1%;
   }
-  .sd-logout {
+  .cm-logout {
     height: 20%;
     width: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
   }
-  .sd-log-menu {
+  .cm-log-menu {
     width: 100%;
   }
   
   }
   @media only screen and (max-width: 500px) {
-    .sd-hamburger {
+    .cm-hamburger {
       top: 5px;
-      left: 40px;
+      left: 55px;
     }
-    .sd-menu:first-of-type {
-      margin-top: 17%;
+    .cm-menu:first-of-type {
+      margin-top: 13%;
     } 
   }
-  
-  .sd-section {
-    width: 83.5%;
-    height: 100%;
-    margin: 30px;
-    display: flex;
-    
-  }
-  
-  table {
-    width: 100%;
-  }
-  tr {
-    height: 70px;
-    width: 90%;
-    margin: 5px 10px;
-    display: flex;
-    align-items: center;
-  }
-  tr:nth-of-type(2n) {
-    background: rgb(79, 194, 123, 0.5);
-  }
-  th, td {
-    display: inherit;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    font-size: 20px;
-    margin: auto;
-    padding: 5px;
-  }
-  td:nth-of-type(2) {
-    justify-content: left;
-  }
-  
-  td img {
-    height: 70%;
-    width: 50px;
-    margin: 0 15px 0 0;
-    border-radius: 50%;
-  }
 
+  .cm-section {
+    width: 83%;
+    height: 80vh;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+  }
   
+  .cside, .sside {
+      font-size: 1.2em;
+      width: 40%;
+      min-height: 70px;
+      height: fit-content;
+      margin: 5px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+  }
+  .cside p, .sside p {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      margin: 10px;
+      padding: 5px;
+      border-radius: 5px;
+  }
+  .cside {
+      background: rgb(106, 155, 122);
+      margin-left: auto;
+      
+    }
+    .sside {
+      background: rgb(138, 139, 121);
+      margin-right: auto;
+  }
+.sside .cm-message-img {
+    height: 80%;
+    width: 70px;
+    margin: 20px;
+    margin-right: auto;
+    border-radius: 50%;
+}
+.cside .cm-message-img {
+    height: 80%;
+    width: 70px;
+    margin: 20px;
+    margin-left: auto;
+    border-radius: 50%;
+}

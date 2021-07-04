@@ -1,45 +1,45 @@
 import React from "react";
 import {Link} from "react-router-dom"
 
-import './cn.css';
+import './bas.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-function Cnaside(props) {
+function Basaside(props) {
     return (
         <aside className={props.ham}>
             
-            <div className="cn-menu-bar">
-            <Link to="/gasme-fe-pjt-3/customer-dashboard" className="cn-menu">
+            <div className="bas-menu-bar">
+            <Link to="/gasme-fe-pjt-3/customer-dashboard" className="bas-menu">
                     <FontAwesomeIcon icon="home" className="icon" />
                     Home
                 </Link>
-                <a href="../../seller " className="cn-menu" >
+                <a href="../../seller " className="bas-menu" >
                     <FontAwesomeIcon icon="shopping-cart" className="icon" />
 
                     Order History
-                </a><a href="#" className="cn-menu" >
+                </a><a href="#" className="bas-menu" >
                     <FontAwesomeIcon icon="comment" className="icon" />
 
                     Messages
-                </a><a href="#" className="cn-menu active" >
+                </a><a href="#" className="bas-menu" >
                     <FontAwesomeIcon icon="bell" className="icon" />
 
                     Notifications
-                </a><a href="#" className="cn-menu" >
+                </a><a href="#" className="bas-menu" >
                     <FontAwesomeIcon icon="cog" className="icon" />
 
                     Settings
                 </a>
-                <a href="#" className="cn-menu" >
+                <a href="#" className="bas-menu active" >
                     <FontAwesomeIcon icon="exchange-alt" className="icon" />
 
                     Become a Seller
                 </a>
 
             </div>
-            <div className="cn-logout">
+            <div className="bas-logout">
 
-                <a href="#" className="cn-log-menu">
+                <a href="#" className="bas-log-menu">
                     <FontAwesomeIcon icon="sign-out-alt" className="icon" />
                     Log Out
                 </a>
@@ -48,4 +48,4 @@ function Cnaside(props) {
 
     )
 }
-export default Cnaside;
+export default Basaside;

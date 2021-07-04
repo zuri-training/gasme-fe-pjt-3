@@ -5,10 +5,10 @@ import ContextProvider from "./assets/environ/ContextProvider";
 import CreateAccount from "./create-account/CreateAccount";
 import Main from "./landing/Main";
 import Login from "./login/Login";
-import Sd from "./seller dashboard.js"
-import Cd from "./customer dashboard.js"
 import Ss from "./seller setting.js"
 import Cn from "./customer notification.js"
+import Cm from "./customer messages.js"
+import Bas from "./BAS.js"
 
 function App() {
   return (
@@ -24,8 +24,8 @@ function App() {
           />
           <Route
             exact
-            path="/gasme-fe-pjt-3/customer-dashboard"
-            component={Cd}
+            path="/gasme-fe-pjt-3/customer-messages"
+            component={Cm}
           />
           <Route
             exact
@@ -34,8 +34,8 @@ function App() {
           />
           <Route
             exact
-            path="/gasme-fe-pjt-3/seller-dashboard"
-            component={Sd}
+            path="/gasme-fe-pjt-3/become-a-seller"
+            component={Bas}
           />
           <Route
             exact

@@ -166,7 +166,6 @@ export default function LoginPage({ responseData }) {
               </p>
             </div>
             <div className="continue">
-            <Link to="/gasme-fe-pjt-3/customer-dashboard">
               <button onClick={sendData}>
                 Continue{" "}
                 <Icon
@@ -177,7 +176,6 @@ export default function LoginPage({ responseData }) {
                   className="cont-icon"
                   />
               </button>
-                  </Link>
             </div>
             <div className="google">
               <button>

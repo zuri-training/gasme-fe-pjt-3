@@ -1,5 +1,7 @@
 import React from "react";
 import profile from "../../assets/img/dp.jpeg";
+import './cn.css';
+
 
 import "../../icons/icons.js"
 
