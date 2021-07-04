@@ -6,7 +6,7 @@ import { mdiMenu, mdiMagnify, mdiClose } from "@mdi/js";
 import { useState } from "react";
 
 export default function Banner() {
-  const [show, setShow] = useState("-205px");
+  const [show, setShow] = useState("-290px");
   const dropDown = (val) => {
     setShow(val);
   };
@@ -25,13 +25,16 @@ export default function Banner() {
             <a href="#contactus">Contact Us</a>
           </li>
           <li>
-            <Link to="/gasme-fe-pjt-3/login">Login</Link>
+            <Link to="/gasme-fe-pjt-3/login/customer">Customer</Link>
+          </li>
+          <li>
+            <Link to="/gasme-fe-pjt-3/login/seller">Seller</Link>
           </li>
           <li style={{ borderBottom: "0px" }}>
             <Link to="/gasme-fe-pjt-3/create-account">Create Account</Link>
           </li>
         </ul>
-        <button onClick={() => dropDown("-205px")} className="menu">
+        <button onClick={() => dropDown("-290px")} className="menu">
           <Icon
             path={mdiClose}
             title="menu"
@@ -57,8 +60,11 @@ export default function Banner() {
           </li>
         </nav>
         <div className="buttons">
-          <Link className="login-link" to="/gasme-fe-pjt-3/login">
-            <button className="login">Login</button>
+          <Link className="login-link" to="/gasme-fe-pjt-3/login/customer">
+            <button className="login">customer</button>
+          </Link>
+          <Link className="login-link" to="/gasme-fe-pjt-3/login/seller">
+            <button className="login">seller</button>
           </Link>
           <Link to="/gasme-fe-pjt-3/create-account">
             <button className="acc">Create Account</button>

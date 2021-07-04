@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { context } from "../assets/environ/context";
-// import LoginPage from "./LoginPage";
-import ConsumerDashboard from '../consumer-dashboard/ConsumerDashboard';
+import LoginPage from "./LoginPage";
+import ConsumerDashboard from "../consumer-dashboard/ConsumerDashboard";
 
 export default function Login() {
   const { loginResponse } = useContext(context);
@@ -10,7 +10,7 @@ export default function Login() {
   useEffect(() => {
     const messages = {};
     if (loginResponse.data != null && loginResponse.data.user != null) {
-      messages.CONSUMER_DASHBOARD_OR_SELLER_DASHBOARD = loginResponse.data.user;
+      messages.data = loginResponse.data.user;
     } else if (loginResponse.message != null) {
       messages.errorMsg = loginResponse.message;
     } else {
@@ -23,11 +23,9 @@ export default function Login() {
   return (
     <>
       {loginResponse.error ? (
-        <ConsumerDashboard />
-        // <LoginPage responseData={userData} />
+        <LoginPage responseData={userData} />
       ) : (
-          // <ConsumerDashboard />
-        JSON.stringify(userData)
+        <ConsumerDashboard responseData={userData} />
       )}
     </>
   );

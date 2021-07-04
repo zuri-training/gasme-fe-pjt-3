@@ -164,7 +164,6 @@
 
   .banner .top .menu {
     visibility: visible;
-    background-color: #37b12c;
     border: 0px;
     border-radius: 7px;
     cursor: pointer;
@@ -182,7 +181,7 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;
-    transform: translatey(-205px);
+    transform: translatey(-290px);
     transition: transform 0.3s ease-in;
   }
 
