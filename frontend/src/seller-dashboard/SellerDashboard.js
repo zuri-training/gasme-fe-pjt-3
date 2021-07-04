@@ -51,7 +51,7 @@ export default function SellerDashboard() {
                 size={1}
                 className="filter-icons"
               />
-              Ratings
+              Status
             </h3>
             <div className="stars">
               <input id="completed" type="checkbox" value="completed" />
@@ -394,7 +394,7 @@ export default function SellerDashboard() {
                 <div className="field">#44585</div>
                 <div className="field">11/85/1125</div>
               </div>
-              
+
             </div>
           </section>
         </div>
