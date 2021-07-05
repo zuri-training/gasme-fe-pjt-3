@@ -1,9 +1,7 @@
 .customer-noti-wrapper {
-  border: 1px solid red;
   height: 725px;
-  width: 850px;
   margin: 0px auto;
-  padding: 20px 0;
+  padding: 20px;
 }
 
 .customer-noti-wrapper .notification {
@@ -13,6 +11,7 @@
   align-items: center;
   padding-left: 20px;
   margin-bottom: 3px;
+  border-left: 5px solid green;
 }
 
 .customer-noti-wrapper .notification .intro {
@@ -41,7 +40,7 @@
 .customer-noti-wrapper .notification .text-holder {
   text-align: left;
   flex: 1;
-  padding:0 10px;
+  padding:10px;
   color: #000;
   font-size: 1rem;
 }

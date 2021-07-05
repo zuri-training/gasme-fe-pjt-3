@@ -2,6 +2,11 @@ import "./ConsumerDashboard.css";
 import logo from "../assets/img/logogreen.png";
 import altimg from "../assets/img/altImg.jpg";
 import Icon from "@mdi/react";
+import ConsumerHome from "./consumer-home/ConsumerHome";
+import CustomerSetting from "./customer-setting/CustomerSetting";
+import CustomerMessage from "./customer-message/CustomerMessage";
+import CustomerNotification from "./customer-notification/CustomerNotification";
+import BecomeSeller from "./become-seller/BecomeSeller";
 import {
   mdiAbacus,
   mdiHomeOutline,
@@ -26,25 +31,34 @@ export default function ConsumerDashboard({ responseData }) {
   const [show, setShow] = useState("305px");
   const [dropMenuHeight, setDropMenu] = useState(false);
   const [pageTitle, setPageTitle] = useState("home");
+  const [mainContent, setMainContent] = useState(ConsumerHome);
   const dropDown = (val) => {
     setShow(val);
   };
 
   const navigate = useCallback((e) => {
     setPageTitle(e.target.textContent);
+    const pages = {
+      Home: ConsumerHome,
+      Settings: CustomerSetting,
+      Notifications: CustomerNotification,
+      Messages: CustomerMessage,
+      "Become a seller": BecomeSeller,
+    };
+    setMainContent(pages[e.target.textContent]);
   }, []);
 
   const testo = () => {
-    console.log(true)
+    console.log(true);
     const requestOptions = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        "vendorId": "60d5c7cae34e280015efee29",
-        "rating": 4.5,
-        "body": "excellent service"
+        vendorId: "60d5c7cae34e280015efee29",
+        rating: 4.5,
+        body: "excellent service",
       }),
     };
 
@@ -276,7 +290,7 @@ export default function ConsumerDashboard({ responseData }) {
                   <Icon path={mdiCogOutline} className="aside-icon" />
                   Settings
                 </li>
-                <li onClick={testo}>
+                <li onClick={navigate}>
                   <Icon path={mdiStoreOutline} className="aside-icon" />
                   Become a seller
                 </li>
@@ -288,268 +302,7 @@ export default function ConsumerDashboard({ responseData }) {
             </div>
           </aside>
           <section className="content">
-            <div className="wrapper">
-              <div className="stores">
-                <div
-                  className="store-img"
-                  style={{ backgroundImage: `url(${""})` }}
-                ></div>
-                <div className="store-detail">
-                  <div className="name-star">
-                    <h3>The Store Name</h3>
-                    <span className="star-holder">
-                      &#9733; &#9733; &#9733; &#9733; &#9733;
-                    </span>
-                  </div>
-                  <div className="store-address">
-                    <p>Store address, street, state</p>
-                  </div>
-                  <div className="order-cost">
-                    <p>
-                      Minimum order :{" "}
-                      <span style={{ color: "black" }}>100kg</span>
-                    </p>
-                    <p style={{ color: "#299445", fontWeight: "bold" }}>
-                      #400/kg
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="stores">
-                <div
-                  className="store-img"
-                  style={{ backgroundImage: `url(${""})` }}
-                ></div>
-                <div className="store-detail">
-                  <div className="name-star">
-                    <h3>The Store Name</h3>
-                    <span className="star-holder">
-                      &#9733; &#9733; &#9733; &#9733; &#9733;
-                    </span>
-                  </div>
-                  <div className="store-address">
-                    <p>Store address, street, state</p>
-                  </div>
-                  <div className="order-cost">
-                    <p>
-                      Minimum order :{" "}
-                      <span style={{ color: "black" }}>100kg</span>
-                    </p>
-                    <p style={{ color: "#299445", fontWeight: "bold" }}>
-                      #400/kg
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="stores">
-                <div
-                  className="store-img"
-                  style={{ backgroundImage: `url(${""})` }}
-                ></div>
-                <div className="store-detail">
-                  <div className="name-star">
-                    <h3>The Store Name</h3>
-                    <span className="star-holder">
-                      &#9733; &#9733; &#9733; &#9733; &#9733;
-                    </span>
-                  </div>
-                  <div className="store-address">
-                    <p>Store address, street, state</p>
-                  </div>
-                  <div className="order-cost">
-                    <p>
-                      Minimum order :{" "}
-                      <span style={{ color: "black" }}>100kg</span>
-                    </p>
-                    <p style={{ color: "#299445", fontWeight: "bold" }}>
-                      #400/kg
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="stores">
-                <div
-                  className="store-img"
-                  style={{ backgroundImage: `url(${""})` }}
-                ></div>
-                <div className="store-detail">
-                  <div className="name-star">
-                    <h3>The Store Name</h3>
-                    <span className="star-holder">
-                      &#9733; &#9733; &#9733; &#9733; &#9733;
-                    </span>
-                  </div>
-                  <div className="store-address">
-                    <p>Store address, street, state</p>
-                  </div>
-                  <div className="order-cost">
-                    <p>
-                      Minimum order :{" "}
-                      <span style={{ color: "black" }}>100kg</span>
-                    </p>
-                    <p style={{ color: "#299445", fontWeight: "bold" }}>
-                      #400/kg
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="stores">
-                <div
-                  className="store-img"
-                  style={{ backgroundImage: `url(${""})` }}
-                ></div>
-                <div className="store-detail">
-                  <div className="name-star">
-                    <h3>The Store Name</h3>
-                    <span className="star-holder">
-                      &#9733; &#9733; &#9733; &#9733; &#9733;
-                    </span>
-                  </div>
-                  <div className="store-address">
-                    <p>Store address, street, state</p>
-                  </div>
-                  <div className="order-cost">
-                    <p>
-                      Minimum order :{" "}
-                      <span style={{ color: "black" }}>100kg</span>
-                    </p>
-                    <p style={{ color: "#299445", fontWeight: "bold" }}>
-                      #400/kg
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="stores">
-                <div
-                  className="store-img"
-                  style={{ backgroundImage: `url(${""})` }}
-                ></div>
-                <div className="store-detail">
-                  <div className="name-star">
-                    <h3>The Store Name</h3>
-                    <span className="star-holder">
-                      &#9733; &#9733; &#9733; &#9733; &#9733;
-                    </span>
-                  </div>
-                  <div className="store-address">
-                    <p>Store address, street, state</p>
-                  </div>
-                  <div className="order-cost">
-                    <p>
-                      Minimum order :{" "}
-                      <span style={{ color: "black" }}>100kg</span>
-                    </p>
-                    <p style={{ color: "#299445", fontWeight: "bold" }}>
-                      #400/kg
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="stores">
-                <div
-                  className="store-img"
-                  style={{ backgroundImage: `url(${""})` }}
-                ></div>
-                <div className="store-detail">
-                  <div className="name-star">
-                    <h3>The Store Name</h3>
-                    <span className="star-holder">
-                      &#9733; &#9733; &#9733; &#9733; &#9733;
-                    </span>
-                  </div>
-                  <div className="store-address">
-                    <p>Store address, street, state</p>
-                  </div>
-                  <div className="order-cost">
-                    <p>
-                      Minimum order :{" "}
-                      <span style={{ color: "black" }}>100kg</span>
-                    </p>
-                    <p style={{ color: "#299445", fontWeight: "bold" }}>
-                      #400/kg
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="stores">
-                <div
-                  className="store-img"
-                  style={{ backgroundImage: `url(${""})` }}
-                ></div>
-                <div className="store-detail">
-                  <div className="name-star">
-                    <h3>The Store Name</h3>
-                    <span className="star-holder">
-                      &#9733; &#9733; &#9733; &#9733; &#9733;
-                    </span>
-                  </div>
-                  <div className="store-address">
-                    <p>Store address, street, state</p>
-                  </div>
-                  <div className="order-cost">
-                    <p>
-                      Minimum order :{" "}
-                      <span style={{ color: "black" }}>100kg</span>
-                    </p>
-                    <p style={{ color: "#299445", fontWeight: "bold" }}>
-                      #400/kg
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="stores">
-                <div
-                  className="store-img"
-                  style={{ backgroundImage: `url(${""})` }}
-                ></div>
-                <div className="store-detail">
-                  <div className="name-star">
-                    <h3>The Store Name</h3>
-                    <span className="star-holder">
-                      &#9733; &#9733; &#9733; &#9733; &#9733;
-                    </span>
-                  </div>
-                  <div className="store-address">
-                    <p>Store address, street, state</p>
-                  </div>
-                  <div className="order-cost">
-                    <p>
-                      Minimum order :{" "}
-                      <span style={{ color: "black" }}>100kg</span>
-                    </p>
-                    <p style={{ color: "#299445", fontWeight: "bold" }}>
-                      #400/kg
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="stores">
-                <div
-                  className="store-img"
-                  style={{ backgroundImage: `url(${""})` }}
-                ></div>
-                <div className="store-detail">
-                  <div className="name-star">
-                    <h3>The Store Name</h3>
-                    <span className="star-holder">
-                      &#9733; &#9733; &#9733; &#9733; &#9733;
-                    </span>
-                  </div>
-                  <div className="store-address">
-                    <p>Store address, street, state</p>
-                  </div>
-                  <div className="order-cost">
-                    <p>
-                      Minimum order :{" "}
-                      <span style={{ color: "black" }}>100kg</span>
-                    </p>
-                    <p style={{ color: "#299445", fontWeight: "bold" }}>
-                      #400/kg
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div className="wrapper">{mainContent}</div>
           </section>
         </div>
       </div>

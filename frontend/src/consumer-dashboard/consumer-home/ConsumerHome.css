@@ -1,0 +1,102 @@
+.consumer-home-wrap {
+  overflow-y: scroll;
+  height: 760px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.consumer-home-wrap .stores {
+  height: 280px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 7px 20px;
+
+}
+
+.consumer-home-wrap .store-img {
+  width: 250px;
+  height: 180px;
+  background-color: #778899;
+}
+
+.consumer-home-wrap .store-detail {
+  background-color: #fff;
+  box-shadow: 2px 2px 3px -3px;
+  padding: 5px;
+}
+
+.consumer-home-wrap .name-star {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.consumer-home-wrap .name-star h3 {
+  font-size: 1.3rem;
+}
+
+.consumer-home-wrap .name-star .star-holder {
+  color: gold;
+}
+
+.consumer-home-wrap .store-address p {
+  text-transform: capitalize;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.consumer-home-wrap .order-cost {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.consumer-home-wrap .order-cost p {
+  font-size: 1rem;
+  color: #474646;
+}
+
+@media only screen and (max-width: 650px) {
+  .consumer-home-wrap .stores {
+    height: 250px;
+  }
+
+  .consumer-home-wrap .store-img {
+    width: 150px;
+    height: 150px;
+    background-color: #778899;
+  }
+
+
+
+  .consumer-home-wrap .name-star {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .consumer-home-wrap .name-star h3 {
+    font-size: 0.89rem;
+  }
+
+  .consumer-home-wrap .name-star .star-holder {
+    color: gold;
+    line-height: 0.8;
+  }
+
+  .consumer-home-wrap .store-address p {
+    font-size: 0.7rem;
+    letter-spacing: 0px;
+  }
+
+  .consumer-home-wrap .order-cost p {
+    font-size: 0.7rem;
+  }
+}

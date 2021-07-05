@@ -1,25 +1,25 @@
 .customer-msg-wrapper {
-  border: 1px solid red;
-  height: 725px;
-  width: 850px;
-  margin: 0px auto;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
+  padding: 5px 20px;
 }
 
 .customer-msg-wrapper .display {
-  border: 1px solid rgb(46, 44, 44);
   border-radius: 7px;
   height: 650px;
-  width: 850px;
+  width: 100%;
+  max-width: 850px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 10px;
   overflow-y: scroll;
+  background-color: #f1f1f1d3  ;
+  border: 1px solid #a9adb391;
 }
 
 .customer-msg-wrapper .dmsg {
@@ -80,6 +80,8 @@
   display: flex;
   justify-content: space-between;
   padding: 7px;
+  margin-top: 7px;
+  background-color: #f1f1f186;
 }
 
 .customer-msg-wrapper input {

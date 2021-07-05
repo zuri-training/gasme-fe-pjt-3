@@ -6,6 +6,7 @@ import Main from "./landing/Main";
 import Login from "./login/Login";
 import LoginSeller from "./login-seller/LoginSeller";
 import SellerDashboard from "./seller-dashboard/SellerDashboard";
+import ConsumerDashboard from "./consumer-dashboard/ConsumerDashboard";
 import BecomeSeller from "./consumer-dashboard/become-seller/BecomeSeller";
 import CustomerMessage from "./consumer-dashboard/customer-message/CustomerMessage";
 import CustomerNotification from "./consumer-dashboard/customer-notification/CustomerNotification";
@@ -31,6 +32,11 @@ function App() {
             exact
             path="/gasme-fe-pjt-3/seller-dashboard"
             component={(props) => <SellerDashboard {...props} />}
+          />
+           <Route
+            exact
+            path="/gasme-fe-pjt-3/customer-dashboard"
+            component={ConsumerDashboard}
           />
           <Route
             exact
