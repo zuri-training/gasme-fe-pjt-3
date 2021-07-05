@@ -4,7 +4,7 @@ import "./InTouch.css";
 
 export default function InTouch() {
   return (
-    <div className="intouch-wrapper">
+    <div className="intouch-wrapper" id="contactus">
       <div className="map">
         <div>
           <h1>Get In Touch</h1>
@@ -14,9 +14,9 @@ export default function InTouch() {
       <div className="form">
         <form>
           <h3>Send Us a Message</h3>
-          <input placeholder="Your Name" type="text" />
-          <input placeholder="Your Email" type="text" />
-          <textarea placeholder="Your Message" />
+          <input placeholder="Name" type="text" />
+          <input placeholder="Email" type="text" />
+          <textarea placeholder="Message" />
           <input type="button" value="Send" />
         </form>
         <div className="contact-info">
