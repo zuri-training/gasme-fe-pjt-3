@@ -1,8 +1,8 @@
 import React from "react";
 
-import Header from "./components/seller settings parts/header.js";
-import Aside from "./components/seller settings parts/aside.js"
-import Section from "./components/seller settings parts/section.js"
+import Header from "./seller settings parts/header.js";
+import Aside from "./seller settings parts/aside.js"
+import Section from "./seller settings parts/section.js"
 
 import "./components/seller settings parts/App.css"
 import { useState } from "react";

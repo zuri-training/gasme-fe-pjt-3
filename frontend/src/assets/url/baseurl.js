@@ -1,1 +1,0 @@
-export const baseUrl =  "https://gas-and-me-api.herokuapp.com"
