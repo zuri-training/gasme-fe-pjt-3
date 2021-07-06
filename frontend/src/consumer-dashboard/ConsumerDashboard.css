@@ -138,9 +138,9 @@
 .c-board .top-title h2 {
   text-transform: uppercase;
   font-size: 1.3rem;
-  color: #6b6b6b;
+  color: green;
   letter-spacing: 2px;
-  border-bottom: 3px solid #6b6b6b;
+  border-bottom: 3px solid green;
 }
 
 

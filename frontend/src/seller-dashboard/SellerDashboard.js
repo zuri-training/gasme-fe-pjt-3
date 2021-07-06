@@ -15,10 +15,15 @@ import {
   mdiChevronDown,
 } from "@mdi/js";
 import { useCallback, useState } from "react";
+import SellerHome from "./seller-home/SellerHome";
+import SellerMessage from './seller-message/SellerMessage'
+import SellerNotification from "./seller-notification/SellerNotification";
+import SellerSetting from "./seller-setting/SellerSetting";
 
 export default function SellerDashboard() {
   const [show, setShow] = useState("305px");
   const [dropMenuHeight, setDropMenu] = useState(false);
+  const [mainContent, setMainContent] = useState(SellerHome);
   const [pageTitle, setPageTitle] = useState("home");
   const dropDown = (val) => {
     setShow(val);
@@ -26,7 +31,15 @@ export default function SellerDashboard() {
 
   const navigate = useCallback((e) => {
     setPageTitle(e.target.textContent);
+    const pages = {
+      "Customer's Orders": SellerHome,
+      Settings: SellerSetting,
+      Notifications: SellerNotification,
+      Messages: SellerMessage,
+    };
+    setMainContent(pages[e.target.textContent]);
   }, []);
+
   return (
     <div className="s-board">
       <div className="filter-side" style={{ transform: `translatex(${show})` }}>
@@ -117,7 +130,6 @@ export default function SellerDashboard() {
               <li onClick={navigate}>Messages</li>
               <li onClick={navigate}>Notifications</li>
               <li onClick={navigate}>Settings</li>
-              <li onClick={navigate}>Become a seller</li>
               <li onClick={navigate}>Logout</li>
             </ul>
           </div>
@@ -137,7 +149,7 @@ export default function SellerDashboard() {
               <ul>
                 <li onClick={navigate}>
                   <Icon path={mdiHomeOutline} className="aside-icon" />
-                  Customer's Order
+                  Customer's Orders
                 </li>
                 <li onClick={navigate}>
                   <Icon path={mdiCartOutline} className="aside-icon" />
@@ -166,236 +178,7 @@ export default function SellerDashboard() {
             </div>
           </aside>
           <section className="content">
-            <div className="head">
-              <div className="in-head" style={{ flex: "1" }}>
-                S/N
-              </div>
-              <div className="in-head" style={{ flex: "4" }}>
-                Customer
-              </div>
-              <div className="in-head">Quantity(KG)</div>
-              <div className="in-head">Price (#)</div>
-              <div className="in-head">Date</div>
-            </div>
-            <div className="wrapper">
-              <div className="row">
-                <div id="sn" className="field" style={{ flex: "1" }}>
-                  <span>1</span>
-                </div>
-                <div id="name" className="field">
-                  <div className="img-holder" style={{ backgroundImage: `url(${altimg})` }} ></div>
-                  <span>Mr. Owonikoko Komukolo</span>
-                </div>
-                <div className="field">1903kg</div>
-                <div className="field">#44585</div>
-                <div className="field">11/85/1125</div>
-              </div>
-              <div className="row">
-                <div id="sn" className="field" style={{ flex: "1" }}>
-                  <span>1</span>
-                </div>
-                <div id="name" className="field">
-                  <div className="img-holder" style={{ backgroundImage: `url(${altimg})` }} ></div>
-                  <span>Mr. Owonikoko Komukolo</span>
-                </div>
-                <div className="field">1903kg</div>
-                <div className="field">#44585</div>
-                <div className="field">11/85/1125</div>
-              </div>
-              <div className="row">
-                <div id="sn" className="field" style={{ flex: "1" }}>
-                  <span>1</span>
-                </div>
-                <div id="name" className="field">
-                  <div className="img-holder" style={{ backgroundImage: `url(${altimg})` }} ></div>
-                  <span>Mr. Owonikoko Komukolo</span>
-                </div>
-                <div className="field">1903kg</div>
-                <div className="field">#44585</div>
-                <div className="field">11/85/1125</div>
-              </div>
-              <div className="row">
-                <div id="sn" className="field" style={{ flex: "1" }}>
-                  <span>1</span>
-                </div>
-                <div id="name" className="field">
-                  <div className="img-holder" style={{ backgroundImage: `url(${altimg})` }} ></div>
-                  <span>Mr. Owonikoko Komukolo</span>
-                </div>
-                <div className="field">1903kg</div>
-                <div className="field">#44585</div>
-                <div className="field">11/85/1125</div>
-              </div>
-              <div className="row">
-                <div id="sn" className="field" style={{ flex: "1" }}>
-                  <span>1</span>
-                </div>
-                <div id="name" className="field">
-                  <div className="img-holder" style={{ backgroundImage: `url(${altimg})` }} ></div>
-                  <span>Mr. Owonikoko Komukolo</span>
-                </div>
-                <div className="field">1903kg</div>
-                <div className="field">#44585</div>
-                <div className="field">11/85/1125</div>
-              </div>
-              <div className="row">
-                <div id="sn" className="field" style={{ flex: "1" }}>
-                  <span>1</span>
-                </div>
-                <div id="name" className="field">
-                  <div className="img-holder" style={{ backgroundImage: `url(${altimg})` }} ></div>
-                  <span>Mr. Owonikoko Komukolo</span>
-                </div>
-                <div className="field">1903kg</div>
-                <div className="field">#44585</div>
-                <div className="field">11/85/1125</div>
-              </div>
-              <div className="row">
-                <div id="sn" className="field" style={{ flex: "1" }}>
-                  <span>1</span>
-                </div>
-                <div id="name" className="field">
-                  <div className="img-holder" style={{ backgroundImage: `url(${altimg})` }} ></div>
-                  <span>Mr. Owonikoko Komukolo</span>
-                </div>
-                <div className="field">1903kg</div>
-                <div className="field">#44585</div>
-                <div className="field">11/85/1125</div>
-              </div>
-              <div className="row">
-                <div id="sn" className="field" style={{ flex: "1" }}>
-                  <span>1</span>
-                </div>
-                <div id="name" className="field">
-                  <div className="img-holder" style={{ backgroundImage: `url(${altimg})` }} ></div>
-                  <span>Mr. Owonikoko Komukolo</span>
-                </div>
-                <div className="field">1903kg</div>
-                <div className="field">#44585</div>
-                <div className="field">11/85/1125</div>
-              </div>
-              <div className="row">
-                <div id="sn" className="field" style={{ flex: "1" }}>
-                  <span>1</span>
-                </div>
-                <div id="name" className="field">
-                  <div className="img-holder" style={{ backgroundImage: `url(${altimg})` }} ></div>
-                  <span>Mr. Owonikoko Komukolo</span>
-                </div>
-                <div className="field">1903kg</div>
-                <div className="field">#44585</div>
-                <div className="field">11/85/1125</div>
-              </div>
-              <div className="row">
-                <div id="sn" className="field" style={{ flex: "1" }}>
-                  <span>1</span>
-                </div>
-                <div id="name" className="field">
-                  <div className="img-holder" style={{ backgroundImage: `url(${altimg})` }} ></div>
-                  <span>Mr. Owonikoko Komukolo</span>
-                </div>
-                <div className="field">1903kg</div>
-                <div className="field">#44585</div>
-                <div className="field">11/85/1125</div>
-              </div>
-              <div className="row">
-                <div id="sn" className="field" style={{ flex: "1" }}>
-                  <span>1</span>
-                </div>
-                <div id="name" className="field">
-                  <div className="img-holder" style={{ backgroundImage: `url(${altimg})` }} ></div>
-                  <span>Mr. Owonikoko Komukolo</span>
-                </div>
-                <div className="field">1903kg</div>
-                <div className="field">#44585</div>
-                <div className="field">11/85/1125</div>
-              </div>
-              <div className="row">
-                <div id="sn" className="field" style={{ flex: "1" }}>
-                  <span>1</span>
-                </div>
-                <div id="name" className="field">
-                  <div className="img-holder" style={{ backgroundImage: `url(${altimg})` }} ></div>
-                  <span>Mr. Owonikoko Komukolo</span>
-                </div>
-                <div className="field">1903kg</div>
-                <div className="field">#44585</div>
-                <div className="field">11/85/1125</div>
-              </div>
-              <div className="row">
-                <div id="sn" className="field" style={{ flex: "1" }}>
-                  <span>1</span>
-                </div>
-                <div id="name" className="field">
-                  <div className="img-holder" style={{ backgroundImage: `url(${altimg})` }} ></div>
-                  <span>Mr. Owonikoko Komukolo</span>
-                </div>
-                <div className="field">1903kg</div>
-                <div className="field">#44585</div>
-                <div className="field">11/85/1125</div>
-              </div>
-              <div className="row">
-                <div id="sn" className="field" style={{ flex: "1" }}>
-                  <span>1</span>
-                </div>
-                <div id="name" className="field">
-                  <div className="img-holder" style={{ backgroundImage: `url(${altimg})` }} ></div>
-                  <span>Mr. Owonikoko Komukolo</span>
-                </div>
-                <div className="field">1903kg</div>
-                <div className="field">#44585</div>
-                <div className="field">11/85/1125</div>
-              </div>
-              <div className="row">
-                <div id="sn" className="field" style={{ flex: "1" }}>
-                  <span>1</span>
-                </div>
-                <div id="name" className="field">
-                  <div className="img-holder" style={{ backgroundImage: `url(${altimg})` }} ></div>
-                  <span>Mr. Owonikoko Komukolo</span>
-                </div>
-                <div className="field">1903kg</div>
-                <div className="field">#44585</div>
-                <div className="field">11/85/1125</div>
-              </div>
-              <div className="row">
-                <div id="sn" className="field" style={{ flex: "1" }}>
-                  <span>1</span>
-                </div>
-                <div id="name" className="field">
-                  <div className="img-holder" style={{ backgroundImage: `url(${altimg})` }} ></div>
-                  <span>Mr. Owonikoko Komukolo</span>
-                </div>
-                <div className="field">1903kg</div>
-                <div className="field">#44585</div>
-                <div className="field">11/85/1125</div>
-              </div>
-              <div className="row">
-                <div id="sn" className="field" style={{ flex: "1" }}>
-                  <span>1</span>
-                </div>
-                <div id="name" className="field">
-                  <div className="img-holder" style={{ backgroundImage: `url(${altimg})` }} ></div>
-                  <span>Mr. Owonikoko Komukolo</span>
-                </div>
-                <div className="field">1903kg</div>
-                <div className="field">#44585</div>
-                <div className="field">11/85/1125</div>
-              </div>
-              <div className="row">
-                <div id="sn" className="field" style={{ flex: "1" }}>
-                  <span>1</span>
-                </div>
-                <div id="name" className="field">
-                  <div className="img-holder" style={{ backgroundImage: `url(${altimg})` }} ></div>
-                  <span>Mr. Owonikoko Komukolo</span>
-                </div>
-                <div className="field">1903kg</div>
-                <div className="field">#44585</div>
-                <div className="field">11/85/1125</div>
-              </div>
-
-            </div>
+            {mainContent}
           </section>
         </div>
       </div>
