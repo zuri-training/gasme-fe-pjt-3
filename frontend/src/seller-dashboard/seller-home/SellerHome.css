@@ -1,5 +1,4 @@
 .s-board .wrapper {
-  border: 3px solid red;
   overflow-y: scroll;
   height: 725px;
   padding: 10px 0px;
@@ -7,13 +6,11 @@
 }
 
 .s-board .content .head {
-  border: 1px solid red;
   display: flex;
   flex-direction: row;
 }
 
 .s-board .in-head {
-  border: 1px solid red;
   flex: 2;
   text-align: center;
   font-size: 1.125rem;

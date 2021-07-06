@@ -1,5 +1,4 @@
 .s-board {
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,14 +8,13 @@
 }
 
 .s-board .wrap {
-  border: 2px solid orange;
   width: 100%;
   max-width: 1700px;
   flex: 1;
 }
 
 .s-board .filter-side {
-  background-color: #fff;
+  background-color: #ffffff;
   width: 300px;
   position: absolute;
   z-index: 1;
@@ -25,6 +23,7 @@
   bottom: 0;
   transform: translatex(300px);
   transition: transform 0.3s ease-in;
+  border-left: 1px solid #474646 ;
 }
 
 .s-board .filter-icons {
@@ -33,11 +32,11 @@
 }
 
 .s-board .filter-top {
-  border: 2px solid red;
+  border-bottom: 2px solid #c7cbce;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e4e9ed;
+  background-color: #ebf0f3;
   padding: 5px 10px;
 }
 
@@ -46,10 +45,6 @@
   border: 0px;
 }
 
-.s-board .filter-body {
-  padding-left: 10px;
-  padding-top: 10px;
-}
 
 .s-board .filter-body {
   padding-left: 10px;
@@ -73,19 +68,46 @@
   margin-right: 10px;
 }
 
-.s-board .ratings {
-  border: 3px solid rgb(0, 217, 255);
-}
-
+.s-board .support-delivery .deliv,
+.s-board .volume .vol,
 .s-board .ratings .stars {
-  border: 1px solid red;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
+.s-board .support-delivery label,
+.s-board .location label,
+.s-board .volume label,
 .s-board .ratings label {
   font-size: 1.2rem;
+}
+
+.s-board .search-location input[type="text"] {
+  border: 1px solid #474646;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 4px;
+}
+
+.s-board .search-location input[type="text"]:focus {
+  outline: none;
+}
+
+.s-board .search-location input[type="text"] {
+  margin-left: 5px;
+}
+
+.s-board .open-close {
+  font-size: 1.2rem;
+}
+
+.s-board .open-close > div {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
 }
 
 .s-board .apply-filters button {
@@ -98,18 +120,16 @@
 }
 
 .s-board .top {
-  border: 3px solid rgb(145, 255, 0);
   height: 80px;
   margin-top: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #474646;
 }
 
-.s-board .logo {
-  border: 1px solid red;
-}
+
 
 .s-board .logo img {
   width: 60px;
@@ -118,15 +138,16 @@
 .s-board .top-title h2 {
   text-transform: uppercase;
   font-size: 1.3rem;
-  color: #6b6b6b;
+  color: green;
   letter-spacing: 2px;
-  border-bottom: 3px solid #6b6b6b;
+  border-bottom: 3px solid green;
 }
 
+
+
 .s-board .filter button {
-  background-color: transparent;
   font-size: 0.9rem;
-  color: #299445;
+  color: green;
   width: 105px;
   font-weight: bold;
   display: flex;
@@ -134,23 +155,22 @@
   justify-content: space-around;
   align-items: center;
   padding: 7px;
+  border: 1px solid green;
 }
 
+
 .s-board .body {
-  border: 2px solid orchid;
   display: flex;
   flex-direction: row;
 }
 
 .s-board aside {
-  border: 3px solid rgb(68, 0, 255);
   width: 300px;
   display: flex;
   flex-direction: column;
 }
 
 .s-board .profile-pic {
-  border: 1px solid orange;
   height: 250px;
   display: flex;
   flex-direction: column;
@@ -173,19 +193,16 @@
 }
 
 .s-board .sidenav {
-  border: 3px solid rgb(255, 30, 0);
   height: 500px;
 }
 
 .s-board .sidenav ul {
-  border: 3px solid rgb(255, 30, 0);
   display: flex;
   flex-direction: column;
   height: inherit;
 }
 
 .s-board .sidenav li {
-  border: 3px solid rgb(255, 30, 0);
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -194,6 +211,11 @@
   color: #1f1e1e;
   font-size: 1.2rem;
   cursor: pointer;
+  border-bottom: 1px solid #474646;
+}
+
+.s-board .sidenav li:hover {
+  background-color: rgb(216, 212, 212);
 }
 
 .s-board .sidenav .aside-icon {
@@ -203,12 +225,10 @@
 }
 
 .s-board .content {
-  border: 3px solid rgb(0, 255, 21);
   flex: 1;
   position: relative;
+  border-left: 1px solid #474646;;
 }
-
-
 
 .s-board section::after {
   background: url(../assets/img/biglogo.png);
@@ -226,22 +246,14 @@
   z-index: -1;
   border-radius: 20px;
 }
+
 .s-board .dropMenu {
   display: none;
 }
 
-/* media querry */
+/* media query */
 
-@media only screen and (max-width: 800px) {
-  .s-board .in-head {
-    font-size: 0.925rem;
-  }
-  .s-board .row .field {
-    font-size: 0.99rem;
-  }
-  .s-board .wrapper #name {
-    flex: 5;
-  }
+@media only screen and (max-width: 650px) {
   .s-board aside {
     display: none;
   }
@@ -290,4 +302,3 @@
     background-color: #272626;
   }
 }
-
