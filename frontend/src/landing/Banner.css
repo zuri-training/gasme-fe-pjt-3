@@ -6,11 +6,12 @@
 }
 
 .banner::after {
-  background: url("../assets/bannerImg.png");
+  background: rgba(0, 0, 0, 0.6) url("../assets/img/bannerImg.png");
+  background-blend-mode: darken;
   background-position: center center;
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  filter: grayscale(70%);
+
   content: "";
   position: absolute;
   left: 0;
@@ -30,14 +31,15 @@
 }
 
 .banner .new-menu {
-  display: none;
+  position: absolute;
+  visibility: hidden;
 }
 
-.top .logo {
+.banner .top .logo {
   margin-right: auto;
 }
 
-.top nav {
+.banner .top nav {
   height: 40px;
   display: flex;
   flex-direction: row;
@@ -47,21 +49,24 @@
   margin-right: 100px;
 }
 
-nav li {
+.banner .top nav li {
   list-style: none;
+}
+.banner .top nav li a {
   font-size: 1.2em;
   letter-spacing: 1px;
-  color: #fff;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
+  color: #fff;
 }
 
-nav li:hover {
+.banner nav li a:hover {
   border-bottom: 3px solid #10e048;
   font-size: 1.3em;
 }
 
-.top .buttons button {
+.banner .top .buttons button {
   font-size: 1em;
   padding: 10px 30px;
   border-radius: 5px;
@@ -73,16 +78,21 @@ nav li:hover {
   cursor: pointer;
 }
 
-.buttons .login {
+.banner .buttons .login {
   margin-right: 15px;
 }
 
-.top .buttons button:hover {
+.banner .buttons .login-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.banner .top .buttons button:hover {
   background-color: #deeee5;
   color: #299445;
 }
 
-.top .menu {
+.banner .top .menu {
   visibility: hidden;
 }
 
@@ -94,42 +104,44 @@ nav li:hover {
   z-index: 2;
 }
 
-.big-text h1 {
+.banner .big-text h1 {
   color: #ffe81b;
   font-size: min(max(1rem, 4vw), 4.5em);
   margin-top: 90px;
 }
 
-.body .small-text {
+.banner .body .small-text {
   color: #fff;
   font-size: min(max(0.7rem, 2vw), 1.5em);
-  margin-top: 40px;
+  margin-top: 100px;
+  font-weight: bold;
 }
 
-.body .search {
+.banner .body .search {
   display: flex;
   background-color: #fff;
   border-radius: 7px;
   padding: 15px 20px;
-  margin: 50px 0;
+  margin-top: 100px;
+  margin-bottom: 108px;
   max-width: 600px;
   cursor: pointer;
 }
 
-.body .search input[type="text"] {
+.banner .body .search input[type="text"] {
   border: 0px;
   font-size: 1.5em;
   width: 100%;
 }
 
-.body .search input[type="text"]::placeholder {
+.banner .body .search input[type="text"]::placeholder {
   font-size: 1em;
 }
-.body .search input[type="text"]:focus {
+.banner .body .search input[type="text"]:focus {
   outline: none;
 }
 
-.body .search button {
+.banner .body .search button {
   background-color: #37b12c;
   border: 0px;
   border-radius: 5px;
@@ -142,23 +154,23 @@ nav li:hover {
 
 /* media queries */
 @media only screen and (max-width: 1200px) {
-  .top nav {
+  .banner .top nav {
     display: none;
   }
 
-  .top .buttons {
+  .banner .top .buttons {
     display: none;
   }
 
-  .top .menu {
+  .banner .top .menu {
     visibility: visible;
-    background-color: #37b12c;
     border: 0px;
     border-radius: 7px;
     cursor: pointer;
   }
   /* new menu */
   .banner .new-menu {
+    visibility: visible;
     position: absolute;
     background-color: #4d4d4d;
     left: 0;
@@ -169,10 +181,12 @@ nav li:hover {
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;
+    transform: translatey(-290px);
+    transition: transform 0.3s ease-in;
   }
 
   .banner .new-nav {
-    padding-left: 100px;
+    padding: 0px 100px;
     margin: 0px;
     display: flex;
     flex-direction: column;
@@ -180,17 +194,17 @@ nav li:hover {
   }
 
   .banner .new-nav li {
-    border-bottom: 1px solid #dbd8d5;
+    border-bottom: 1px solid #9e9c9a;
     margin: 0px;
     list-style: none;
   }
 
-  .new-nav li a:hover {
-    background-color: #7a6e6e;
+  .banner .new-nav li a:hover {
+    background-color: #464343;
     font-weight: bold;
   }
 
-  .new-nav li a {
+  .banner .new-nav li a {
     display: block;
     font-size: 1.2em;
     padding: 8px 0px;
@@ -212,22 +226,22 @@ nav li:hover {
 }
 
 @media only screen and (max-width: 800px) {
-  .body .search {
+  .banner .body .search {
     padding: 7px 15px;
     margin-top: 50px;
     max-width: 600px;
   }
-  .body .search input[type="text"]::placeholder {
+  .banner .body .search input[type="text"]::placeholder {
     font-size: 0.7em;
   }
-  .body .search button {
+  .banner .body .search button {
     align-items: center;
     font-size: 1em;
     padding: 3px 10px;
     color: #fff;
   }
 
-  .body div input[type="text"] {
+  .banner .body div input[type="text"] {
     font-size: 1.2em;
   }
 

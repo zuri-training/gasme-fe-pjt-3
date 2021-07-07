@@ -1,0 +1,152 @@
+.create-acc-container {
+  background: url(../assets/img/bottomleft.png) left bottom,
+    url(../assets/img/topleft.png) top left,
+    url(../assets/img/topright.png) top right;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 10px;
+  min-height: 100vh;
+}
+
+.create-acc-container > * {
+  width: 100%;
+  max-width: 1500px;
+}
+
+.create-acc-container .top {
+  padding-top: 20px;
+}
+
+.create-acc-container .body {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.create-acc-container .content {
+  width: 100%;
+  height: fit-content;
+  max-width: 600px;
+  margin-top: 30px;
+}
+
+.create-acc-container .content > * {
+  margin-bottom: 20px;
+}
+
+.create-acc-container .address input,
+.create-acc-container .number input,
+.create-acc-container .email input,
+.create-acc-container .bus-name input,
+.create-acc-container .pass input,
+.create-acc-container .name input:focus {
+  outline: none;
+}
+
+.create-acc-container .title {
+  text-align: center;
+}
+
+.create-acc-container .title h2 {
+  font-size: 2rem;
+}
+
+/* .create-acc-container .address input , */
+.create-acc-container .name input,
+.create-acc-container .number input,
+.create-acc-container .email input {
+  border: 0px;
+  font-size: 1.3rem;
+  padding: 15px;
+  width: 100%;
+  background: #d1e6db;
+  border-radius: 8px;
+}
+
+/* .create-acc-container .address, */
+.create-acc-container .name,
+.create-acc-container .number,
+.create-acc-container .email {
+  position: relative;
+}
+
+/* .create-acc-container .bus-name , */
+.create-acc-container .pass {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #d1e6db;
+  border-radius: 8px;
+  padding-right: 10px;
+  position: relative;
+}
+/* .create-acc-container .bus-name input, */
+.create-acc-container .pass input {
+  border: 0px;
+  background: #d1e6db;
+  flex: 1;
+  padding: 15px;
+  font-size: 1.3rem;
+  border-radius: 8px;
+}
+
+.create-acc-container .mark {
+  color: #37b12c;
+  font-weight: bold;
+}
+
+/* .create-acc-container .bus-name .mark > span {
+  color: red;
+} */
+
+.create-acc-container .terms {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.create-acc-container .terms input[type="checkbox"] {
+  margin-right: 5px;
+  border: 0px;
+}
+
+.create-acc-container .google,
+.create-acc-container .create {
+  display: flex;
+  justify-content: center;
+}
+
+.create-acc-container .create button {
+  background-color: #37b12c;
+  color: #fff;
+  padding: 13px 73px;
+  border: 0px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+}
+
+.create-acc-container .google button {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  padding: 13px 50px;
+  border: 1px solid #37b12c;
+  font-size: 0.7rem;
+  border-radius: 7px;
+}
+
+.create-acc-container .invalid-input {
+  line-height: 1;
+  position: absolute;
+  font-size: 0.88rem;
+  right: 50%;
+  color: red;
+  bottom: -17px;
+}

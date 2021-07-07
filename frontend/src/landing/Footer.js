@@ -1,7 +1,7 @@
 import "./Footer.css";
 import Icon from "@mdi/react";
 import { mdiFacebook, mdiTwitter, mdiInstagram } from "@mdi/js";
-import logo from "../assets/logo.png";
+import logo from "../assets/img/logo.png";
 
 export default function Footer() {
   return (
@@ -60,7 +60,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="ff">
-        <span>c 2021. Gas & Me. All Rights Reserved.</span>
+        <span> &copy; 2021. Gas & Me. All Rights Reserved.</span>
       </div>
     </div>
   );

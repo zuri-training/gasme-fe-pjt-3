@@ -9,7 +9,7 @@
 }
 
 .intouch-wrapper .map::after {
-  background: rgba(0, 0, 0, 0.4) url(../assets/map.png);
+  background: rgba(0, 0, 0, 0.4) url(../assets/img/map.png);
   background-blend-mode: darken;
   background-position: center center;
   background-size: 100% 100%;
@@ -23,7 +23,7 @@
   z-index: -1;
 }
 
-.map div {
+.intouch-wrapper .map div {
   margin-top: 70px;
   margin-left: 70px;
 }
@@ -33,7 +33,7 @@
   color: #ffde5a;
 }
 
-.map div h3 {
+.intouch-wrapper .map div h3 {
   font-size: min(max(1rem, 3vw), 1.5em);
   color: #ffde5a;
 }
@@ -53,25 +53,17 @@
   align-items: center;
   padding: 20px;
   background-color: #e4e4e4;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .intouch-wrapper form h3 {
   padding: 0px;
   border: 0px;
   font-size: 1.3em;
-  font-weight: normal;
-  color: #120101;
-  font-weight: 500;
+  color: #120101d5;
 }
 
-.intouch-wrapper form textarea {
-  height: 100px;
-}
 
-.intouch-wrapper form input[type="button"] {
-  background-color: #37b12c;
-  color: #fff;
-}
 
 .intouch-wrapper form > * {
   width: 350px;
@@ -81,8 +73,18 @@
   margin-top: 15px;
   border-radius: 7px;
   border: 1px solid #cff8d8;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
+.intouch-wrapper form input[type="button"] {
+  background-color: #37b12c;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.intouch-wrapper form textarea {
+  height: 100px;
+}
 .intouch-wrapper form,
 .intouch-wrapper .contact-info {
   position: relative;
