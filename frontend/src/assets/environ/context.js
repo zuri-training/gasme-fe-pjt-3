@@ -3,13 +3,13 @@ import React from "react";
 export const context = React.createContext({
   postNewAccData: () => {},
   newAccountData: { error: true },
-  setNewAccountData: () => { },
+  setNewAccountData: () => {},
   // login customer
   postLoginData: () => {},
   loginResponse: { error: true },
-  setLoginResponse: () => { },
+  setLoginResponse: () => {},
   //login seller
   postLoginSellerData: () => {},
   loginSellerResponse: { error: true },
-  setLoginSellerResponse: () => { },
+  setLoginSellerResponse: () => {},
 });

@@ -7,6 +7,7 @@ import CustomerSetting from "./customer-setting/CustomerSetting";
 import CustomerMessage from "./customer-message/CustomerMessage";
 import CustomerNotification from "./customer-notification/CustomerNotification";
 import BecomeSeller from "./become-seller/BecomeSeller";
+import { Redirect } from "react-router-dom";
 import {
   mdiAbacus,
   mdiHomeOutline,
@@ -24,14 +25,16 @@ import {
   mdiTruckDelivery,
   mdiChevronDown,
 } from "@mdi/js";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
-export default function ConsumerDashboard({ responseData }) {
-  console.log(responseData);
+export default function ConsumerDashboard() {
+  const localData = JSON.parse(localStorage.getItem("login"));
+
   const [show, setShow] = useState("305px");
   const [dropMenuHeight, setDropMenu] = useState(false);
   const [pageTitle, setPageTitle] = useState("home");
   const [mainContent, setMainContent] = useState(ConsumerHome);
+  const [secured, setSecurity] = useState(true);
   const dropDown = (val) => {
     setShow(val);
   };
@@ -44,6 +47,10 @@ export default function ConsumerDashboard({ responseData }) {
       Notifications: CustomerNotification,
       Messages: CustomerMessage,
       "Become a seller": BecomeSeller,
+      Logout: () => {
+        localStorage.clear();
+        setSecurity(false)
+      },
     };
     setMainContent(pages[e.target.textContent]);
   }, []);
@@ -66,8 +73,10 @@ export default function ConsumerDashboard({ responseData }) {
       .then((response) => response.json())
       .then((data) => console.log(data));
   };
+
   return (
-    <div className="c-board">
+    <>
+   {secured ?  <div className="c-board">
       <div className="filter-side" style={{ transform: `translatex(${show})` }}>
         <div className="filter-top">
           <h3>FILTERS</h3>
@@ -262,7 +271,7 @@ export default function ConsumerDashboard({ responseData }) {
                 style={{ backgroundImage: `url(${altimg})` }}
               ></div>
               <div className="user-intro">
-                <h3>Test User</h3>
+                  <h3>{localData.data.token}</h3>
               </div>
             </div>
             <div className="sidenav">
@@ -306,6 +315,8 @@ export default function ConsumerDashboard({ responseData }) {
           </section>
         </div>
       </div>
-    </div>
+      </div> :
+      <Redirect to={{ pathname: "/gasme-fe-pjt-3/login/customer" }} />}
+      </>
   );
 }

@@ -36,7 +36,10 @@ function ContextProvider({ children }) {
 
     fetch(baseUrl + "/auth/login", requestOptions)
       .then((response) => response.json())
-      .then((data) => setLoginResponse(data));
+      .then((data) => {
+        setLoginResponse(data);
+        localStorage.setItem("login", JSON.stringify(data));
+      });
   }, []);
 
   const postLoginSellerData = useCallback((newAccountInput) => {
@@ -50,7 +53,10 @@ function ContextProvider({ children }) {
 
     fetch(baseUrl + "/auth/login", requestOptions)
       .then((response) => response.json())
-      .then((data) => setLoginSellerResponse(data));
+      .then((data) => {
+        setLoginSellerResponse(data);
+        localStorage.setItem("login", JSON.stringify(data));
+      });
   }, []);
 
   const value = {

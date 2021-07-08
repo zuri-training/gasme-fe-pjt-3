@@ -31,9 +31,9 @@ function App() {
           <Route
             exact
             path="/gasme-fe-pjt-3/seller-dashboard"
-            component={(props) => <SellerDashboard {...props} />}
+            component={SellerDashboard}
           />
-           <Route
+          <Route
             exact
             path="/gasme-fe-pjt-3/customer-dashboard"
             component={ConsumerDashboard}

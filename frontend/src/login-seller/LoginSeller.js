@@ -3,10 +3,10 @@ import { context } from "../assets/environ/context";
 import LoginSellerPage from "./LoginSellerPage";
 import { Redirect } from "react-router-dom";
 
-export default function Login() {
+export default function LoginSeller() {
   const { loginSellerResponse } = useContext(context);
   const [userData, setUserData] = useState({});
-
+  const localData = JSON.parse(localStorage.getItem("login"));
   useEffect(() => {
     const messages = {};
     if (
@@ -34,8 +34,9 @@ export default function Login() {
 
   return (
     <>
-      {loginSellerResponse.error ||
-      loginSellerResponse.data.user.vendorId == null ? (
+      {localData == null ||
+      localData.error ||
+      localData.data.user.vendorId == null ? (
         <LoginSellerPage responseData={userData} />
       ) : (
         <Redirect to={{ pathname: "/gasme-fe-pjt-3/seller-dashboard" }} />
